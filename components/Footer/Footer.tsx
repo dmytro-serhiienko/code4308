@@ -31,7 +31,7 @@ export function Footer() {
             <Link href="https://4308.store/collections/4308" target="_blank">
               Магазин
             </Link>
-            <Link href="#contacts">Контакти</Link>
+            <Link href="/contacts">Контакти</Link>
           </nav>
         </div>
 
