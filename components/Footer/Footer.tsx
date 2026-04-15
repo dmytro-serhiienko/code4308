@@ -8,7 +8,10 @@ export function Footer() {
       <div className={css.container}>
         {/* Лого  */}
         <div className={css.column} data-anim="fade-up">
-          <div className={css.logo}>CODE4308</div>
+          <Link href="/" className={css.logoLink}>
+            <span className={css.logoText}>Code4308</span>
+          </Link>
+
           <p className={css.description}>
             Платформа для тих, хто слухає, думає та діє. Приєднуйся до
             спільноти.

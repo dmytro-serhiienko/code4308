@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-// import { CiMenuFries } from "react-icons/ci";
-// import { IoCloseSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 
