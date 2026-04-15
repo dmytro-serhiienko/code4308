@@ -1,0 +1,126 @@
+.about {
+  background-color: #000;
+  color: #fff;
+  padding: 0 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.label::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-right: 15px;
+}
+
+.description p {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.hostItem {
+  margin-bottom: 24px;
+  padding-left: 15px;
+  border-left: 1px solid #fff;
+}
+
+.hostLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.hostLink:hover {
+  opacity: 0.6;
+}
+
+.hostName {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.instagramIcon {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.hostRank {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.quote {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #f2d244;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-style: italic;
+}
+
+@media (min-width: 1000px) {
+  .about {
+    padding: 7px 8%;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 80px;
+  }
+
+  .description p {
+    font-size: 42px;
+    margin-bottom: 0;
+  }
+
+  .hostName {
+    font-size: 22px;
+  }
+
+  .instagramIcon {
+    font-size: 24px;
+  }
+
+  .quote {
+    font-size: 36px;
+    max-width: 900px;
+    line-height: 1.1;
+  }
+}

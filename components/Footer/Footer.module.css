@@ -1,0 +1,112 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav a {
+  font-size: 15px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.socials a {
+  opacity: 0.6;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.copy {
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .column {
+    align-items: flex-start;
+    text-align: left;
+    flex: 0 1 350px;
+    padding: 35px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+}

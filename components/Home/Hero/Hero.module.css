@@ -1,0 +1,170 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.textBlock {
+  position: absolute;
+  top: 19%;
+  left: 20px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.heroText {
+  color: #fff;
+  font-size: clamp(50px, 15vw, 80px);
+  font-weight: 800;
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 5px;
+  animation: slideUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  opacity: 0;
+  /* color: #f9d800; */
+}
+
+.heroText:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.heroText:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.heroText:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.imageWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 10;
+
+  background-attachment: fixed;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-image: url("/image/hero/dimko.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto 80%;
+  background-attachment: fixed;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.bottomActions {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  z-index: 30;
+}
+
+.pulseButton {
+  background: transparent;
+  /* color: #fff; */
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  border: 1px solid rgba(242, 210, 68, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(242, 210, 68, 0.3);
+
+  color: #f2d244;
+}
+
+.pulseButton:hover {
+  background: #f2d244;
+  color: #000;
+  box-shadow: none;
+}
+
+.pulseButton::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@media (min-width: 1000px) {
+  .textBlock {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .heroText {
+    font-size: 160px;
+    letter-spacing: -8px;
+  }
+
+  .imageWrapper {
+    height: 110vh;
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+
+  .image {
+    height: 95%;
+    background-position: right 5% bottom;
+    background-size: auto 112%;
+  }
+
+  .bottomActions {
+    left: 5.5%;
+    bottom: 50px;
+  }
+
+  .pulseButton {
+    padding: 16px 32px;
+    font-size: 14px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.3, 1.6);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,217 @@
+.header {
+  --logo-size: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.scrolled {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logoLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 2px 8px;
+  /* color: var(--text); */
+  text-decoration: none;
+  font-size: var(--logo-size);
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f2d244;
+}
+
+/* Відбиток */
+.logoLink::before {
+  content: "";
+  position: absolute;
+  inset: -18px -26px;
+  background-image: url("/image/header/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.8;
+  transform: rotate(20deg);
+  filter: saturate(1.05) brightness(1.1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.logoText {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+.menuTrigger {
+  position: relative;
+  z-index: 2100;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.iconWrap {
+  position: relative;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBase {
+  position: absolute;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  transition:
+    transform 0.28s ease,
+    opacity 0.2s ease;
+}
+
+.iconBurger {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.iconClose {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.72);
+}
+
+.iconOpen .iconBurger {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.72);
+}
+
+.iconOpen .iconClose {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Оверлей  */
+.navOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--background);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  animation: fadeIn 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 25px;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0px;
+
+  transition:
+    letter-spacing 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.3s ease,
+    transform 0.5s ease;
+}
+
+.navLabel {
+  display: inline-block;
+}
+
+.navArrow {
+  width: 0.9em;
+  height: 0.9em;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+.navLink:hover {
+  letter-spacing: 6px;
+  transform: translateX(10px);
+  opacity: 0.8;
+}
+
+.navLink:hover .navArrow {
+  transform: translate(4px, -4px);
+}
+
+@media (min-width: 1000px) {
+  .header {
+    --logo-size: 30px;
+    padding: 30px 60px;
+  }
+
+  .navOverlay {
+    padding-left: 10%;
+  }
+
+  .navLink {
+    font-size: 72px;
+    letter-spacing: -2px;
+  }
+
+  .navLink:hover {
+    letter-spacing: 12px;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
