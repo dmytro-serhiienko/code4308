@@ -137,8 +137,8 @@
   transform: translateX(-50%);
   font-size: 180px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.06);
   z-index: 0;
+  color: rgba(242, 210, 68, 0.06);
 }
 
 @media (min-width: 1000px) {
@@ -149,7 +149,6 @@
     transform: translateX(-50%);
     font-size: 620px;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.04);
     letter-spacing: -20px;
     z-index: 0;
   }

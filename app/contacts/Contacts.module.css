@@ -63,7 +63,8 @@
   font-size: 18px;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
-  color: #fff;
+  color: var(--font);
+
   text-decoration: none;
 
   &:hover {
@@ -75,6 +76,7 @@
 .icon {
   font-size: 20px;
   opacity: 0.5;
+  color: #f2d244;
 }
 
 .form {
@@ -114,6 +116,10 @@
 .inputGroup input:focus,
 .inputGroup textarea:focus {
   border-bottom-color: #fff;
+}
+
+.inputForm::placeholder {
+  color: rgba(242, 210, 68, 0.5);
 }
 
 .button {

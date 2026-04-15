@@ -42,12 +42,19 @@ export default function Contacts() {
           <form className={css.form} data-anim="fade-right">
             <div className={css.inputGroup}>
               <label htmlFor="name">Імʼя</label>
-              <input type="text" id="name" placeholder="Твоє ім'я" required />
+              <input
+                className={css.inputForm}
+                type="text"
+                id="name"
+                placeholder="Твоє ім'я"
+                required
+              />
             </div>
 
             <div className={css.inputGroup}>
               <label htmlFor="email">Email</label>
               <input
+                className={css.inputForm}
                 type="email"
                 id="email"
                 placeholder="example@mail.com"
@@ -58,6 +65,7 @@ export default function Contacts() {
             <div className={css.inputGroup}>
               <label htmlFor="message">Повідомлення</label>
               <textarea
+                className={css.inputForm}
                 id="message"
                 rows={5}
                 placeholder="Твоє запитання..."

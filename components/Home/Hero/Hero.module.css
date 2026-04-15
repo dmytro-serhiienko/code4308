@@ -32,7 +32,6 @@
   margin-bottom: 5px;
   animation: slideUp 0.8s cubic-bezier(0.2, 1, 0.3, 1) forwards;
   opacity: 0;
-  /* color: #f9d800; */
 }
 
 .heroText:nth-child(1) {
@@ -85,7 +84,7 @@
 .image2 {
   width: 100%;
   height: 100%;
-  background-image: url("/image/hero/kyrylo.png");
+  background-image: url("/image/hero/kyrylo2.png");
   background-repeat: no-repeat;
   background-position: right 48% bottom;
   background-size: auto 92%;
@@ -139,9 +138,8 @@
   transform: translateX(-50%);
   font-size: 200px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.06);
-  /* letter-spacing: -20px; */
   z-index: 5;
+  color: rgba(242, 210, 68, 0.06);
 }
 
 @media (min-width: 1000px) {
@@ -152,8 +150,6 @@
     transform: translateX(-50%);
     font-size: 600px;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.06);
-    /* letter-spacing: -20px; */
     z-index: 5;
   }
 
