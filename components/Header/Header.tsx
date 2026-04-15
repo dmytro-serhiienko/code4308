@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CiMenuFries } from "react-icons/ci";
-import { IoCloseSharp } from "react-icons/io5";
-import { IoIosClose } from "react-icons/io";
+// import { CiMenuFries } from "react-icons/ci";
+// import { IoCloseSharp } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 import css from "./Header.module.css";
 import { MdArrowOutward } from "react-icons/md";
@@ -64,8 +65,8 @@ export function Header() {
               className={`${css.iconWrap} ${menu ? css.iconOpen : ""}`}
               aria-hidden="true"
             >
-              <CiMenuFries className={`${css.iconBase} ${css.iconBurger}`} />
-              <IoIosClose className={`${css.iconBase} ${css.iconClose}`} />
+              <HiMenuAlt3 className={`${css.iconBase} ${css.iconBurger}`} />
+              <IoClose className={`${css.iconBase} ${css.iconClose}`} />
             </span>
           </button>
         </div>
