@@ -48,6 +48,7 @@ export function Header() {
         <div className={css.logo} data-intro="logo">
           <Link href="/" className={css.logoLink} onClick={closeMenu}>
             <span className={css.logoText}>Code4308</span>
+            <span className={css.logoExtraText}>Podcasts</span>
           </Link>
         </div>
 

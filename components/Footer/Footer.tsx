@@ -12,6 +12,7 @@ export function Footer() {
         <div className={css.column} data-anim="fade-up">
           <Link href="/" className={css.logoLink}>
             <span className={css.logoText}>Code4308</span>
+            <span className={css.logoExtraText}>Podcasts</span>
           </Link>
 
           <p className={css.description}>
