@@ -2,6 +2,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane, FaYoutube, FaSpotify } from "react-icons/fa";
 import css from "./Socials.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const socialLinks = [
   {
@@ -42,7 +43,7 @@ export function Socials() {
 
         <div className={css.linksGrid}>
           {socialLinks.map((link) => (
-            <a
+            <Link
               key={link.id}
               href={link.href}
               target="_blank"
@@ -52,7 +53,7 @@ export function Socials() {
             >
               <div className={css.iconWrapper}>{link.icon}</div>
               <span className={css.linkText}>{link.label}</span>
-            </a>
+            </Link>
           ))}
         </div>
         <Image

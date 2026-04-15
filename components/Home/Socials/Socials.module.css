@@ -42,13 +42,13 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   color: #fff;
-  transition: all 0.3s ease;
-}
+  transition: all 0.3s ease-in-out;
 
-.socialLink:hover {
-  background-color: #fff;
-  color: #000;
-  border-color: #fff;
+  &:hover {
+    background-color: #f2d244;
+    color: #000;
+    transform: translateY(-15px);
+  }
 }
 
 .iconWrapper {
@@ -91,5 +91,6 @@
     border: 0.5px solid rgba(255, 255, 255, 0.1);
     height: 200px;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
   }
 }
