@@ -47,6 +47,7 @@
   justify-content: center;
   opacity: 0.9;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  opacity: 0.3;
 }
 
 .link:hover {
