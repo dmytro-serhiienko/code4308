@@ -7,7 +7,6 @@ export default function Intro() {
   const [loading, setLoading] = useState(true);
   const [counter, setCounter] = useState(0);
 
-  // всередині Intro.tsx
   useEffect(() => {
     if (loading) {
       document.body.style.overflow = "hidden";
@@ -17,7 +16,7 @@ export default function Intro() {
   }, [loading]);
 
   useEffect(() => {
-    // Швидкість лічильника (можна підкрутити ms)
+    // Швидкість лічильника
     const interval = setInterval(() => {
       setCounter((prev) => {
         if (prev >= 100) {
