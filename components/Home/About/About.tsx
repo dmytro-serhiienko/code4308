@@ -21,6 +21,7 @@ export function About() {
           </div>
 
           <div className={css.hosts} data-anim="stagger">
+            {/* Діма */}
             <div className={css.hostItem}>
               <Link
                 href="https://www.instagram.com/dimko_grekovich/"
@@ -36,6 +37,7 @@ export function About() {
               </p>
             </div>
 
+            {/* Кирило */}
             <div className={css.hostItem}>
               <Link
                 href="/"
@@ -46,6 +48,10 @@ export function About() {
                 <p className={css.hostName}>Кирило «Масло» Масалітін</p>
                 <IoLogoInstagram className={css.instagramIcon} />
               </Link>
+              <p className={css.hostRank}>
+                головний сержант 12-ї бригади спеціального призначення НГУ
+                «Азов»
+              </p>
             </div>
           </div>
         </div>
