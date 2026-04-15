@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section className={css.about}>
+    <section className={css.about} id="about">
       <div className={css.container}>
         <div className={css.header} data-anim="fade-left">
           <h2 className={css.label}>Про проєкт</h2>

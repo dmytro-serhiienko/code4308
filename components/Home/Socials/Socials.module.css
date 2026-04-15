@@ -1,8 +1,11 @@
 .socials {
   background-color: #000;
   color: #fff;
-  padding: 100px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .container {
@@ -11,7 +14,7 @@
 }
 
 .title {
-  font-size: clamp(32px, 8vw, 64px);
+  font-size: clamp(32px, 10vw, 84px);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 0.9;
@@ -26,7 +29,8 @@
 
 .linksGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2x2 на мобілці */
+  /* 2x2 на мобілці */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -59,15 +63,28 @@
   letter-spacing: 2px;
 }
 
-/* --- DESKTOP (від 1000px) --- */
+.imageBack {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-inline: auto;
+}
+
 @media (min-width: 1000px) {
+  .imageBack {
+    margin-top: 60px;
+  }
+
   .socials {
-    padding: 150px 8%;
+    padding-top: 150px;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 
   .linksGrid {
-    grid-template-columns: repeat(4, 1fr); /* 4 в ряд на десктопі */
-    gap: 0; /* Прибираємо проміжок, щоб зробити спільну сітку */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
   }
 
   .socialLink {

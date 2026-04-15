@@ -1,6 +1,7 @@
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane, FaYoutube, FaSpotify } from "react-icons/fa";
 import css from "./Socials.module.css";
+import Image from "next/image";
 
 const socialLinks = [
   {
@@ -23,7 +24,7 @@ const socialLinks = [
   },
   {
     id: 4,
-    href: "https://open.spotify.com/...", // онови реальне посилання
+    href: "https://open.spotify.com/show/2q0TuBjroDZeBT7ucSmrZI",
     icon: <FaSpotify />,
     label: "Spotify",
   },
@@ -54,6 +55,15 @@ export function Socials() {
             </a>
           ))}
         </div>
+        <Image
+          className={css.imageBack}
+          src="/image/social/background.png"
+          alt="Social background"
+          width={2400}
+          height={660}
+          sizes="(min-width: 1000px) 1200px, 100vw"
+          quality={100}
+        />
       </div>
     </section>
   );
