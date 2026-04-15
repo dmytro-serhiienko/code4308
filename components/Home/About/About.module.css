@@ -80,7 +80,7 @@
 .quote {
   font-size: 20px;
   line-height: 1.4;
-  color: #f2d244;
+  color: var(--text);
   font-weight: 400;
   margin: 0;
   padding-top: 30px;
