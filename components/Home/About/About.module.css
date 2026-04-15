@@ -1,7 +1,7 @@
 .about {
   background-color: #000;
   color: #fff;
-  padding: 0 20px;
+  padding: 30px 20px;
   min-height: 100vh;
 }
 
@@ -90,7 +90,7 @@
 
 @media (min-width: 1000px) {
   .about {
-    padding: 7px 8%;
+    padding: 60px 8%;
   }
 
   .label {
