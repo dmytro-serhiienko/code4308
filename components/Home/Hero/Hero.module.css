@@ -45,7 +45,7 @@
   animation-delay: 0.6s;
 }
 
-.imageWrapper {
+.imageWrapper1 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -58,13 +58,37 @@
   z-index: 10;
 }
 
-.image {
+.image1 {
   width: 100%;
   height: 100%;
   background-image: url("/image/hero/dimko.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: auto 80%;
+  background-attachment: scroll;
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.imageWrapper2 {
+  position: absolute;
+  bottom: -14%;
+  right: 20%;
+  transform: translateX(47%);
+  width: 100%;
+  height: 108vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 9;
+}
+
+.image2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/image/hero/kyrylo.png");
+  background-repeat: no-repeat;
+  background-position: right 48% bottom;
+  background-size: auto 92%;
   background-attachment: scroll;
   filter: contrast(1.1) brightness(0.9);
 }
@@ -144,16 +168,31 @@
     letter-spacing: -8px;
   }
 
-  .imageWrapper {
+  .imageWrapper1 {
     height: 110vh;
     justify-content: flex-end;
     padding-right: 5%;
   }
 
-  .image {
+  .image1 {
     height: 95%;
     background-position: right 5% bottom;
     background-size: auto 112%;
+    background-attachment: fixed;
+  }
+
+  .imageWrapper2 {
+    height: 116vh;
+    justify-content: flex-end;
+    padding-right: 5%;
+    bottom: -20%;
+    right: 33%;
+  }
+
+  .image2 {
+    height: 100%;
+    background-position: right 5% bottom;
+    background-size: auto 102%;
     background-attachment: fixed;
   }
 
@@ -170,7 +209,7 @@
 
 /* iOS Safari fallback: fixed backgrounds are unreliable on touch devices */
 @supports (-webkit-touch-callout: none) {
-  .image {
+  .image1 {
     background-attachment: scroll;
   }
 }

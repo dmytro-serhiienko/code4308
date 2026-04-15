@@ -12,8 +12,12 @@ export function Hero() {
           <div className={css.heroText}>Дій.</div>
         </div>
 
-        <div className={css.imageWrapper} data-intro="hero-image">
-          <div className={css.image} aria-hidden="true" />
+        <div className={css.imageWrapper1} data-intro="hero-image">
+          <div className={css.image1} aria-hidden="true" />
+        </div>
+
+        <div className={css.imageWrapper2} data-intro="hero-image">
+          <div className={css.image2} aria-hidden="true" />
         </div>
 
         <div className={css.bottomActions}>
