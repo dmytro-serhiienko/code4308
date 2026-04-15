@@ -55,8 +55,6 @@
   justify-content: center;
   align-items: flex-end;
   z-index: 10;
-
-  background-attachment: fixed;
 }
 
 .image {
@@ -66,7 +64,7 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: auto 80%;
-  background-attachment: fixed;
+  background-attachment: scroll;
   filter: contrast(1.1) brightness(0.9);
 }
 
@@ -131,6 +129,7 @@
     height: 95%;
     background-position: right 5% bottom;
     background-size: auto 112%;
+    background-attachment: fixed;
   }
 
   .bottomActions {
@@ -141,6 +140,13 @@
   .pulseButton {
     padding: 16px 32px;
     font-size: 14px;
+  }
+}
+
+/* iOS Safari fallback: fixed backgrounds are unreliable on touch devices */
+@supports (-webkit-touch-callout: none) {
+  .image {
+    background-attachment: scroll;
   }
 }
 
