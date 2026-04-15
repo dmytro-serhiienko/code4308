@@ -94,10 +94,10 @@
   font-size: 15px;
   opacity: 0.6;
   transition: opacity 0.3s;
-}
 
-.nav a:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .socials {
@@ -111,11 +111,11 @@
   transition:
     transform 0.3s,
     opacity 0.3s;
-}
 
-.socials a:hover {
-  opacity: 1;
-  transform: translateY(-3px);
+  :hover {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
 }
 
 .bottom {

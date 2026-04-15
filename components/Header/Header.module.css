@@ -30,7 +30,7 @@
   justify-content: center;
   overflow: visible;
   padding: 2px 8px;
-  /* color: var(--text); */
+  color: var(--text);
   text-decoration: none;
   font-size: var(--logo-size);
   line-height: 1;
@@ -38,6 +38,13 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   /* color: #f2d244; */
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    /* color: #f2d244; */
+    /* text-shadow: 0 0 12px rgba(242, 210, 68, 0.7); */
+    transform: translateY(-7px) rotate(-2deg);
+  }
 }
 
 .logoText {
@@ -173,6 +180,12 @@
     letter-spacing 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     opacity 0.3s ease,
     transform 0.5s ease;
+
+  &:hover {
+    letter-spacing: 6px;
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
 }
 
 .navLabel {
@@ -184,12 +197,6 @@
   height: 0.9em;
   flex-shrink: 0;
   transition: transform 0.35s ease;
-}
-
-.navLink:hover {
-  letter-spacing: 6px;
-  transform: translateX(10px);
-  opacity: 0.8;
 }
 
 .navLink:hover .navArrow {

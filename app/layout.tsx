@@ -24,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ua" className={`${tektur.variable} h-full antialiased`}>
+    <html
+      lang="ua"
+      className={`${tektur.variable} suppressHydrationWarning h-full antialiased`}
+    >
       <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
         <Intro />

@@ -46,7 +46,7 @@ export function Header() {
     <header className={`${css.header} ${scrolled ? css.scrolled : ""}`}>
       <div className={css.headerContent}>
         <div className={css.logo} data-intro="logo">
-          <Link href="/" className={css.logoLink} onClick={closeMenu}>
+          <Link href="/" className={css.logoLink}>
             <span className={css.logoText}>Code4308</span>
             <span className={css.logoExtraText}>Podcasts</span>
           </Link>
