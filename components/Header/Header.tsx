@@ -47,13 +47,13 @@ export function Header() {
   return (
     <header className={`${css.header} ${scrolled ? css.scrolled : ""}`}>
       <div className={css.headerContent}>
-        <div className={css.logo}>
+        <div className={css.logo} data-intro="logo">
           <Link href="/" className={css.logoLink} onClick={closeMenu}>
             <span className={css.logoText}>Code4308</span>
           </Link>
         </div>
 
-        <div className={css.menuTrigger}>
+        <div className={css.menuTrigger} data-intro="menu">
           <button
             type="button"
             className={css.menuButton}

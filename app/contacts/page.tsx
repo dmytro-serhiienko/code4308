@@ -5,17 +5,19 @@ export default function Contacts() {
   return (
     <main className={css.main}>
       <div className={css.container}>
-        <h1 className={css.title}>Контакти</h1>
+        <h1 className={css.title} data-anim="fade-up">
+          Контакти
+        </h1>
 
         <div className={css.grid}>
           {/* Інфо частина */}
-          <div className={css.info}>
+          <div className={css.info} data-anim="fade-left">
             <p className={css.text}>
               Маєш запитання чи пропозиції? Звʼяжись із нами будь-яким зручним
               способом.
             </p>
 
-            <div className={css.contactList}>
+            <div className={css.contactList} data-anim="stagger">
               <a href="tel:+380000000000" className={css.contactItem}>
                 <FaPhone className={css.icon} />
                 <span>+38 (000) 000 00 00</span>
@@ -36,7 +38,7 @@ export default function Contacts() {
           </div>
 
           {/* Форма */}
-          <form className={css.form}>
+          <form className={css.form} data-anim="fade-right">
             <div className={css.inputGroup}>
               <label htmlFor="name">Імʼя</label>
               <input type="text" id="name" placeholder="Твоє ім'я" required />

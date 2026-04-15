@@ -7,12 +7,12 @@ export function About() {
   return (
     <section className={css.about}>
       <div className={css.container}>
-        <div className={css.header}>
+        <div className={css.header} data-anim="fade-left">
           <h2 className={css.label}>Про проєкт</h2>
         </div>
 
         <div className={css.infoGrid}>
-          <div className={css.description}>
+          <div className={css.description} data-anim="fade-up">
             <p>
               Це подкаст про людей, які формують нову реальність України. Ми
               говоримо з тими, хто вже сьогодні будує країну в освіті, культурі
@@ -20,7 +20,7 @@ export function About() {
             </p>
           </div>
 
-          <div className={css.hosts}>
+          <div className={css.hosts} data-anim="stagger">
             <div className={css.hostItem}>
               <Link
                 href="https://www.instagram.com/dimko_grekovich/"
@@ -50,7 +50,7 @@ export function About() {
           </div>
         </div>
 
-        <div className={css.footerQuote}>
+        <div className={css.footerQuote} data-anim="fade-up">
           <blockquote className={css.quote}>
             Ми віримо, що розмови мають силу. <br />І що нова Україна
             починається з кожного з нас.

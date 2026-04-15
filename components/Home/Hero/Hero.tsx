@@ -11,7 +11,7 @@ export function Hero() {
           <div className={css.heroText}>Дій.</div>
         </div>
 
-        <div className={css.imageWrapper}>
+        <div className={css.imageWrapper} data-intro="hero-image">
           <div className={css.image} aria-hidden="true" />
         </div>
 

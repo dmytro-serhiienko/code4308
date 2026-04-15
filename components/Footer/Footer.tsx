@@ -7,7 +7,7 @@ export function Footer() {
     <footer className={css.footer}>
       <div className={css.container}>
         {/* Лого  */}
-        <div className={css.column}>
+        <div className={css.column} data-anim="fade-up">
           <div className={css.logo}>CODE4308</div>
           <p className={css.description}>
             Платформа для тих, хто слухає, думає та діє. Приєднуйся до
@@ -16,7 +16,7 @@ export function Footer() {
         </div>
 
         {/* Навігація */}
-        <div className={css.column}>
+        <div className={css.column} data-anim="fade-up">
           <h3 className={css.title}>Навігація</h3>
           <nav className={css.nav}>
             <Link href="#hero">Головна</Link>
@@ -30,7 +30,7 @@ export function Footer() {
         </div>
 
         {/* Соцмережі */}
-        <div className={css.column}>
+        <div className={css.column} data-anim="fade-up">
           <h3 className={css.title}>Ми в мережах</h3>
           <div className={css.socials}>
             <Link href="https://www.instagram.com/hub.4308/" target="_blank">

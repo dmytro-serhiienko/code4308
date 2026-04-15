@@ -14,7 +14,7 @@ export function Gallery() {
   const images = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
-    <section className={css.gallerySection}>
+    <section className={css.gallerySection} data-anim="scale-in">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         spaceBetween={10}

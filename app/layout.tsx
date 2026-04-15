@@ -5,6 +5,7 @@ import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { SmoothScroll } from "@/components/ui/SmoothScroll/SmoothScroll";
 import ScrollTop from "@/components/ui/ScrollToTop/ScrollTop";
+import { GsapScrollAnimations } from "@/components/ui/GSAP/Gsap";
 
 const tektur = Tektur({
   variable: "--font-tektur",
@@ -26,6 +27,7 @@ export default function RootLayout({
       <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
         <SmoothScroll>
+          <GsapScrollAnimations />
           <Header />
           <main>{children}</main>
           <Footer />

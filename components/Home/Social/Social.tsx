@@ -32,7 +32,7 @@ export function Social() {
 
   return (
     <section className={css.socialSection} id="about">
-      <div className={css.container}>
+      <div className={css.container} data-anim="stagger">
         {socialLinks.map((link) => (
           <div key={link.id} className={css.iconWrapper}>
             <Link
