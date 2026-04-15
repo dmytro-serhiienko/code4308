@@ -70,14 +70,14 @@
 
 .bottomActions {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 20px;
   z-index: 30;
 }
 
 .pulseButton {
   background: transparent;
-  /* color: #fff; */
+  color: #fff;
   padding: 10px 20px;
   font-size: 11px;
   font-weight: 700;
