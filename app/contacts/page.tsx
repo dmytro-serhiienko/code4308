@@ -1,3 +1,4 @@
+import Link from "next/link";
 import css from "./Contacts.module.css";
 import { FaTelegram, FaEnvelope, FaPhone } from "react-icons/fa6";
 
@@ -13,27 +14,27 @@ export default function Contacts() {
           {/* Інфо частина */}
           <div className={css.info} data-anim="fade-left">
             <p className={css.text}>
-              Маєш запитання чи пропозиції? Звʼяжись із нами будь-яким зручним
-              способом.
+              Маєш запитання чи пропозиції?
+              <br /> Звʼяжись із нами будь-яким зручним способом.
             </p>
 
             <div className={css.contactList} data-anim="stagger">
-              <a href="tel:+380000000000" className={css.contactItem}>
+              <Link href="tel:+380000000000" className={css.contactItem}>
                 <FaPhone className={css.icon} />
                 <span>+38 (000) 000 00 00</span>
-              </a>
-              <a href="mailto:info@code4308.com" className={css.contactItem}>
+              </Link>
+              <Link href="mailto:info@code4308.com" className={css.contactItem}>
                 <FaEnvelope className={css.icon} />
                 <span>info@code4308.com</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://t.me/recruit4308"
                 target="_blank"
                 className={css.contactItem}
               >
                 <FaTelegram className={css.icon} />
                 <span>@recruit4308</span>
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -62,13 +62,14 @@
   gap: 20px;
   font-size: 18px;
   font-weight: 400;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease-in-out;
   color: #fff;
   text-decoration: none;
-}
 
-.contactItem:hover {
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+    transform: translateY(-3px);
+  }
 }
 
 .icon {
@@ -125,13 +126,13 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   margin-top: 20px;
-}
 
-.button:hover {
-  background: #fff;
-  color: #000;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
 }
 
 @media (min-width: 1000px) {
