@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px; 
+  gap: 50px;
 }
 
 .iconWrapper {
@@ -22,13 +22,13 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(255, 255, 255, 0.85) 0%,
     rgba(255, 255, 255, 0.38) 30%,
     rgba(255, 255, 255, 0.12) 55%,
     rgba(255, 255, 255, 0) 76%
-  );
+  ); */
   filter: blur(14px);
   opacity: 0.95;
   transform: scale(0.95);
@@ -40,7 +40,7 @@
 
 .link {
   color: #fff;
-  font-size: 58px; 
+  font-size: 58px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 .link:hover {
   opacity: 1;
   transform: translateY(-3px);
-  color: #fff; 
+  color: #fff;
 }
 
 .iconWrapper:hover::before {
@@ -71,11 +71,11 @@
   }
 
   .container {
-    gap: 100px; 
+    gap: 100px;
   }
 
   .link {
-    font-size: 100px; 
+    font-size: 100px;
   }
 
   .iconWrapper::before {

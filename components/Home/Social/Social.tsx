@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { FaInstagram, FaTelegram, FaYoutube, FaSpotify } from "react-icons/fa6";
+import { FaYoutube, FaSpotify } from "react-icons/fa6";
 import css from "./Social.module.css";
+import { AiFillInstagram } from "react-icons/ai";
 
-import { FiYoutube } from "react-icons/fi";
-import { AiOutlineSpotify } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export function Social() {
@@ -11,7 +10,7 @@ export function Social() {
     {
       id: 1,
       href: "https://www.instagram.com/hub.4308/",
-      icon: <FaInstagram />,
+      icon: <AiFillInstagram />,
     },
     {
       id: 2,
@@ -21,12 +20,12 @@ export function Social() {
     {
       id: 3,
       href: "https://www.youtube.com/@production.4308",
-      icon: <FiYoutube />,
+      icon: <FaYoutube />,
     },
     {
       id: 4,
       href: "https://open.spotify.com/show/2q0TuBjroDZeBT7ucSmrZI",
-      icon: <AiOutlineSpotify />,
+      icon: <FaSpotify />,
     },
   ];
 
