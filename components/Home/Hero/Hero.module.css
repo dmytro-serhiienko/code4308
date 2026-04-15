@@ -108,7 +108,31 @@
   pointer-events: none;
 }
 
+.decor {
+  position: absolute;
+  bottom: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  /* letter-spacing: -20px; */
+  z-index: 5;
+}
+
 @media (min-width: 1000px) {
+  .decor {
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 600px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.06);
+    /* letter-spacing: -20px; */
+    z-index: 5;
+  }
+
   .textBlock {
     top: 50%;
     left: 5%;

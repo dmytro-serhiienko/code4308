@@ -4,6 +4,7 @@ import css from "./Hero.module.css";
 export function Hero() {
   return (
     <section className={css.hero}>
+      <div className={css.decor}>4308</div>
       <div className={css.container}>
         <div className={css.textBlock}>
           <div className={css.heroText}>Слухай.</div>
