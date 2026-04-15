@@ -196,6 +196,10 @@
     padding-left: 10%;
   }
 
+  .navItem {
+    margin-bottom: 0;
+  }
+
   .navLink {
     font-size: 72px;
     letter-spacing: -2px;
