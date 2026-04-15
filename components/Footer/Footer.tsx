@@ -5,6 +5,8 @@ import css from "./Footer.module.css";
 export function Footer() {
   return (
     <footer className={css.footer}>
+      <div className={css.decor}>4308</div>
+
       <div className={css.container}>
         {/* Лого  */}
         <div className={css.column} data-anim="fade-up">
