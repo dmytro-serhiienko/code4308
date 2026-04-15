@@ -89,7 +89,8 @@
   background-position: right 48% bottom;
   background-size: auto 92%;
   background-attachment: scroll;
-  filter: contrast(1.1) brightness(0.9);
+
+  filter: grayscale(100%) contrast(1.2) brightness(0.8);
 }
 
 .bottomActions {
