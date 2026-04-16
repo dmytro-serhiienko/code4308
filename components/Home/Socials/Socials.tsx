@@ -42,6 +42,7 @@ export function Socials() {
         </div>
 
         <div className={css.linksGrid}>
+          {}
           {socialLinks.map((link) => (
             <Link
               key={link.id}

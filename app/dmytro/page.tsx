@@ -1,9 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import css from "./Dmytro.module.css";
 
 export default function DmytroPage() {
   return (
     <main className={css.main}>
+      {/* <div className={css.imgWrapper}>
+        <Image
+          className={css.imgBack}
+          src="/image/person/dimko.png"
+          alt="Dmytro background"
+          width={2400}
+          height={660}
+          sizes="(min-width: 1000px) 1200px, 100vw"
+          quality={100}
+        />
+      </div> */}
       <article className={css.container}>
         <header className={css.header}>
           <span className={css.subtitle}>Ведучий подкасту CODE4308</span>

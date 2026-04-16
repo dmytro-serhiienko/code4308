@@ -3,10 +3,11 @@
   color: #fff;
   min-height: 100vh;
   padding: 140px 20px 80px;
+  position: relative;
 }
 
 .container {
-  max-width: 800px; /* Вужчий текст легше читати */
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -73,6 +74,39 @@
 }
 
 @media (min-width: 1000px) {
+  /* .imgWrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    z-index: 0;
+    filter: grayscale(100%);
+    opacity: 0.4;
+  } */
+  /* 
+  .imgWrapper img {
+    width: 100%;
+    display: block;
+  } */
+
+  /* .imgWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        to bottom left,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(0, 0, 0, 0.6) 65%,
+        rgba(0, 0, 0, 0.95) 100%
+      ),
+        linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 50%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent 40%);
+
+    pointer-events: none;
+  } */
+
   .main {
     padding: 180px 0 100px;
   }

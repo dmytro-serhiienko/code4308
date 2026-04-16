@@ -51,6 +51,15 @@
   }
 }
 
+.decorIcon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  color: white;
+}
+
 .iconWrapper {
   font-size: 32px;
   margin-bottom: 15px;
