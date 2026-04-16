@@ -72,9 +72,24 @@
   opacity: 1;
 }
 
+.imgWrapper {
+  position: fixed;
+  bottom: -15px;
+  width: 160%;
+  z-index: 0;
+  opacity: 0.25;
+  filter: grayscale(100%) contrast(1.2);
+}
+
 @media (min-width: 1000px) {
   .main {
     padding: 180px 0 100px;
+  }
+
+  .imgWrapper {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
   }
 
   .paragraph {

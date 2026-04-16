@@ -8,7 +8,7 @@ export default function DmytroPage() {
       <div className={css.imgWrapper}>
         <Image
           className={css.imgBack}
-          src="/image/person/dim.png"
+          src="/image/person/dima.png"
           alt="Dmytro background"
           width={2400}
           height={660}
