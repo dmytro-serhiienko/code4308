@@ -1,0 +1,83 @@
+.main {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 140px 20px 80px;
+}
+
+.container {
+  max-width: 800px; /* Вужчий текст легше читати */
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 60px;
+  border-left: 2px solid #fff;
+  padding-left: 25px;
+}
+
+.subtitle {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.accent {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 60px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+@media (min-width: 1000px) {
+  .main {
+    padding: 180px 0 100px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+}

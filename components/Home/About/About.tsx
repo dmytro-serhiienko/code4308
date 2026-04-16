@@ -2,6 +2,7 @@ import Image from "next/image";
 import { IoLogoInstagram } from "react-icons/io";
 import css from "./About.module.css";
 import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
 
 export function About() {
   return (
@@ -23,35 +24,47 @@ export function About() {
           <div className={css.hosts} data-anim="stagger">
             {/* Діма */}
             <div className={css.hostItem}>
-              <Link
-                href="https://www.instagram.com/dimko_grekovich/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={css.hostLink}
-              >
+              <div className={css.hostImageWrapper}>
                 <p className={css.hostName}>Дмитро «Ґвар» Грекович</p>
-                <IoLogoInstagram className={css.instagramIcon} />
-              </Link>
+
+                <Link
+                  href="https://www.instagram.com/dimko_grekovich/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={css.hostLink}
+                >
+                  <IoLogoInstagram className={css.instagramIcon} />
+                </Link>
+              </div>
               <p className={css.hostRank}>
                 молодший сержант 1-го корпусу «Азов»
               </p>
+
+              <Link href="/dmytro" className={css.personaLink}>
+                ОСОБИСТИЙ ШЛЯХ <MdArrowOutward className={css.arrowIcon} />
+              </Link>
             </div>
 
             {/* Кирило */}
             <div className={css.hostItem}>
-              <Link
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={css.hostLink}
-              >
+              <div className={css.hostImageWrapper}>
                 <p className={css.hostName}>Кирило «Масло» Масалітін</p>
-                <IoLogoInstagram className={css.instagramIcon} />
-              </Link>
+                <Link
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={css.hostLink}
+                >
+                  <IoLogoInstagram className={css.instagramIcon} />
+                </Link>
+              </div>
               <p className={css.hostRank}>
                 головний сержант 12-ї бригади спеціального призначення НГУ
                 «Азов»
               </p>
+              <Link href="/kyrylo" className={css.personaLink}>
+                ОСОБИСТИЙ ШЛЯХ <MdArrowOutward className={css.arrowIcon} />
+              </Link>
             </div>
           </div>
         </div>
