@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { usePathname } from "next/navigation";
 
 import css from "./Header.module.css";
 import { MdArrowOutward } from "react-icons/md";
@@ -18,6 +19,7 @@ const navLinks = [
 export function Header() {
   const [menu, setMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setMenu((prev) => !prev);
   const closeMenu = () => setMenu(false);
@@ -42,11 +44,16 @@ export function Header() {
     };
   }, [menu]);
 
+  useEffect(() => {
+    setMenu(false);
+    document.body.style.overflow = "auto";
+  }, [pathname]);
+
   return (
     <header className={`${css.header} ${scrolled ? css.scrolled : ""}`}>
       <div className={css.headerContent}>
         <div className={css.logo} data-intro="logo">
-          <Link href="/" className={css.logoLink}>
+          <Link href="/" className={css.logoLink} onClick={closeMenu}>
             <span className={css.logoText}>Code4308</span>
             <span className={css.logoExtraText}>Podcasts</span>
           </Link>
