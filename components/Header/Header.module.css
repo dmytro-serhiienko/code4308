@@ -197,6 +197,7 @@
   height: 0.9em;
   flex-shrink: 0;
   transition: transform 0.35s ease;
+  color: #f2d244;
 }
 
 .navLink:hover .navArrow {
