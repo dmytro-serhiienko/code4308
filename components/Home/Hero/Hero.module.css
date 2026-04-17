@@ -50,7 +50,7 @@
   left: 50%;
   transform: translateX(-47%);
   width: 100%;
-  height: 102vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -60,7 +60,7 @@
 .image1 {
   width: 100%;
   height: 100%;
-  background-image: url("/image/hero/dimko.png");
+  background-image: url("/image/hero/di.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: auto 80%;
@@ -81,17 +81,17 @@
   z-index: 9;
 }
 
-/* .image2 {
+.image2 {
   width: 100%;
   height: 100%;
-  background-image: url("/image/hero/kyrylo.png");
+  background-image: url("/image/hero/kyr.png");
   background-repeat: no-repeat;
-  background-position: right 48% bottom;
-  background-size: auto 90%;
+  background-position: right -70% bottom 80%;
+  background-size: auto 35%;
   background-attachment: scroll;
 
   filter: grayscale(100%) contrast(1.2) brightness(0.9);
-} */
+}
 
 .bottomActions {
   position: absolute;
@@ -134,7 +134,7 @@
 
 .decor {
   position: absolute;
-  bottom: 100;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 200px;
@@ -151,7 +151,7 @@
     transform: translateX(-50%);
     font-size: 600px;
     font-weight: 900;
-    z-index: 5;
+    z-index: 10;
   }
 
   .textBlock {
@@ -168,30 +168,29 @@
   .imageWrapper1 {
     height: 110vh;
     justify-content: flex-end;
-    padding-right: 5%;
   }
 
   .image1 {
     height: 95%;
-    background-position: right 5% bottom;
-    background-size: auto 112%;
+    background-position: right 0% bottom 0%;
+    background-size: auto 80%;
     background-attachment: fixed;
   }
 
-  /* .imageWrapper2 {
+  .imageWrapper2 {
     height: 116vh;
     justify-content: flex-end;
     padding-right: 5%;
     bottom: -20%;
-    right: 33%;
+    right: 35%;
   }
 
   .image2 {
     height: 100%;
-    background-position: right -99% bottom;
-    background-size: auto 102%;
+    background-position: right 40% bottom 90%;
+    background-size: auto 60%;
     background-attachment: fixed;
-  } */
+  }
 
   .bottomActions {
     left: 5.5%;
