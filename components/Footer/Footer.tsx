@@ -25,8 +25,8 @@ export function Footer() {
         <div className={css.column} data-anim="fade-up">
           <h3 className={css.title}>Навігація</h3>
           <nav className={css.nav}>
-            <Link href="#hero">Головна</Link>
-            <Link href="#about">Про нас</Link>
+            <Link href="/">Головна</Link>
+            <Link href="/#about">Про нас</Link>
             <Link href="/podcasts">Подкасти</Link>
             <Link href="https://4308.store/collections/4308" target="_blank">
               Магазин
@@ -63,6 +63,9 @@ export function Footer() {
 
       <div className={css.bottom}>
         <p className={css.copy}>© 2026 CODE 4308. All rights reserved.</p>
+        <Link href="/privacy" className={css.footerLink}>
+          Політика конфіденційності
+        </Link>
       </div>
     </footer>
   );
