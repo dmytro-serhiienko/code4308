@@ -81,7 +81,7 @@
   z-index: 9;
 }
 
-.image2 {
+/* .image2 {
   width: 100%;
   height: 100%;
   background-image: url("/image/hero/kyrylo.png");
@@ -91,7 +91,7 @@
   background-attachment: scroll;
 
   filter: grayscale(100%) contrast(1.2) brightness(0.9);
-}
+} */
 
 .bottomActions {
   position: absolute;
@@ -178,7 +178,7 @@
     background-attachment: fixed;
   }
 
-  .imageWrapper2 {
+  /* .imageWrapper2 {
     height: 116vh;
     justify-content: flex-end;
     padding-right: 5%;
@@ -191,7 +191,7 @@
     background-position: right -99% bottom;
     background-size: auto 102%;
     background-attachment: fixed;
-  }
+  } */
 
   .bottomActions {
     left: 5.5%;
