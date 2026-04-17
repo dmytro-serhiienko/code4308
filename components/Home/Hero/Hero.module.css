@@ -140,7 +140,7 @@
   font-size: 200px;
   font-weight: 900;
   z-index: 5;
-  color: rgba(242, 210, 68, 0.06);
+  color: rgba(242, 210, 68, 0.09);
 }
 
 @media (min-width: 1000px) {

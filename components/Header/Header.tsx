@@ -4,16 +4,10 @@ import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 
+import { navLinks } from "./headerLinks";
+
 import css from "./Header.module.css";
 import { MdArrowOutward } from "react-icons/md";
-
-const navLinks = [
-  { href: "/", label: "Головна" },
-  { href: "/#about", label: "Про нас" },
-  { href: "/podcasts", label: "Подкасти" },
-  { href: "https://4308.store/collections/4308", label: "Магазин" },
-  { href: "/contacts", label: "Контакти" },
-];
 
 export function Header() {
   const [menu, setMenu] = useState(false);
