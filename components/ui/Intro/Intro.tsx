@@ -9,10 +9,20 @@ export default function Intro() {
 
   useEffect(() => {
     if (loading) {
+      document.documentElement.dataset.intro = "playing";
+      window.dispatchEvent(new Event("intro:start"));
+      window.dispatchEvent(new Event("lenis:stop"));
       document.body.style.overflow = "hidden";
     } else {
+      document.documentElement.dataset.intro = "done";
+      window.dispatchEvent(new Event("intro:complete"));
+      window.dispatchEvent(new Event("lenis:start"));
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.documentElement.dataset.intro = "done";
+    };
   }, [loading]);
 
   useEffect(() => {

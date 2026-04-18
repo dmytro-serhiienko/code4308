@@ -37,12 +37,10 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* color: #f2d244; */
+
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    /* color: #f2d244; */
-    /* text-shadow: 0 0 12px rgba(242, 210, 68, 0.7); */
     transform: translateY(-7px) rotate(-2deg);
   }
 }

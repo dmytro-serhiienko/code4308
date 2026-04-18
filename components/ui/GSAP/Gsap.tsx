@@ -1,13 +1,40 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function GsapScrollAnimations() {
+  const pathname = usePathname();
+  const [introComplete, setIntroComplete] = useState(
+    () =>
+      typeof document !== "undefined" &&
+      document.documentElement.dataset.intro === "done",
+  );
+
   useEffect(() => {
+    if (introComplete) {
+      return;
+    }
+
+    const handleIntroComplete = () => setIntroComplete(true);
+    window.addEventListener("intro:complete", handleIntroComplete);
+
+    return () => {
+      window.removeEventListener("intro:complete", handleIntroComplete);
+    };
+  }, [introComplete]);
+
+  useEffect(() => {
+    if (!introComplete) {
+      return;
+    }
+
+    let frameId = 0;
+
     const ctx = gsap.context(() => {
       // Logo flies in from left
       gsap.from("[data-intro='logo']", {
@@ -33,6 +60,15 @@ export function GsapScrollAnimations() {
         duration: 1.4,
         ease: "power2.out",
         delay: 0.6,
+      });
+
+      // Hero decor flies in from left
+      gsap.from("[data-intro='hero-decor']", {
+        x: -140,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.15,
       });
 
       // Fade up
@@ -110,6 +146,7 @@ export function GsapScrollAnimations() {
           duration: 0.7,
           stagger: 0.12,
           ease: "power3.out",
+          clearProps: "transform,opacity",
           scrollTrigger: {
             trigger: el,
             start: "top 85%",
@@ -119,8 +156,15 @@ export function GsapScrollAnimations() {
       });
     });
 
-    return () => ctx.revert();
-  }, []);
+    frameId = requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      ctx.revert();
+    };
+  }, [introComplete, pathname]);
 
   return null;
 }

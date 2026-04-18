@@ -55,6 +55,13 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const lenis = lenisRef.current?.lenis;
+    const introState = document.documentElement.dataset.intro;
+
+    if (introState !== "done") {
+      document.body.style.overflow = "hidden";
+      lenis?.stop();
+      return;
+    }
 
     // Ensure scrolling is always unlocked after route transitions.
     document.body.style.overflow = "auto";
