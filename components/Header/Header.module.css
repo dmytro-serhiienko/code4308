@@ -199,7 +199,11 @@
 }
 
 .navLink:hover .navArrow {
-  transform: translate(4px, -4px);
+  /* transform: translate(4px, -4px); */
+
+  transform: scale(1.9) rotate(360deg);
+  margin-left: 20px;
+  color: rgb(244, 45, 10);
 }
 
 @media (min-width: 1000px) {
@@ -224,6 +228,10 @@
   .navLink:hover {
     letter-spacing: 12px;
     transform: translateX(20px);
+  }
+
+  .navLink:hover .navArrow {
+    margin-left: 70px;
   }
 }
 
