@@ -70,11 +70,10 @@
 
 .imageWrapper2 {
   position: absolute;
-  bottom: -17%;
-  right: 20%;
-  transform: translateX(47%);
+  inset: 0;
+  right: -8%;
   width: 100%;
-  height: 108vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -86,8 +85,8 @@
   height: 100%;
   background-image: url("/image/hero/k.png");
   background-repeat: no-repeat;
-  background-position: right -70% bottom 80%;
-  background-size: auto 35%;
+  background-position: right -20vw bottom 72%;
+  background-size: auto 45%;
   background-attachment: scroll;
 
   filter: grayscale(100%) contrast(1.2) brightness(0.9);
@@ -187,7 +186,7 @@
 
   .image2 {
     height: 100%;
-    background-position: right 40% bottom 90%;
+    background-position: right 20% bottom 85%;
     background-size: auto 60%;
     background-attachment: fixed;
   }
