@@ -65,7 +65,7 @@
   background-position: right bottom;
   background-size: auto 80%;
   background-attachment: scroll;
-  filter: contrast(1.3) brightness(0.8) grayscale(100%);
+  filter: contrast(1.2) brightness(0.8) grayscale(100%);
 }
 
 .imageWrapper2 {
@@ -84,7 +84,7 @@
 .image2 {
   width: 100%;
   height: 100%;
-  background-image: url("/image/hero/kyrylo.png");
+  background-image: url("/image/hero/k.png");
   background-repeat: no-repeat;
   background-position: right -70% bottom 80%;
   background-size: auto 35%;
