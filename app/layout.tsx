@@ -14,8 +14,9 @@ const tektur = Tektur({
 });
 
 export const metadata: Metadata = {
-  title: "CODE4308",
-  description: "PODCAST",
+  title: "CODE 4308 | Подкаст про людей, які формують нову реальність",
+  description:
+    "Офіційний подкаст про тих, хто будує нову Україну в освіті, культурі та суспільстві.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
       lang="ua"
       className={`${tektur.variable} suppressHydrationWarning h-full antialiased`}
     >
-      <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
         <Intro />
         <SmoothScroll>
