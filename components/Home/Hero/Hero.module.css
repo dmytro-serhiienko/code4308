@@ -35,9 +35,8 @@
 
 .imageWrapper1 {
   position: absolute;
-  inset: 0;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 100%;
   height: 70vh;
   display: flex;
@@ -51,7 +50,7 @@
   height: 100%;
   background-image: url("/image/hero/dmytro.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right 0 bottom 0;
   background-size: auto 80%;
   background-attachment: scroll;
   filter: contrast(1.2) brightness(0.8) grayscale(100%);
