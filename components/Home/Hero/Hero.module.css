@@ -5,6 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-attachment: scroll;
 }
 
 .container {
@@ -86,7 +87,7 @@
   background-image: url("/image/hero/k.png");
   background-repeat: no-repeat;
   background-position: right -20vw bottom 72%;
-  background-size: auto 45%;
+  background-size: auto 38%;
   background-attachment: scroll;
 
   filter: grayscale(100%) contrast(1.2) brightness(0.9);
