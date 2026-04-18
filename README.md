@@ -1,4 +1,4 @@
-![CODE4308 Preview](public/readme.jpg)
+![CODE4308 Preview](public/read.jpg)
 
 # CODE4308 Website
 
