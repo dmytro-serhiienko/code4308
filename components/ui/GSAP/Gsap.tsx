@@ -36,8 +36,16 @@ export function GsapScrollAnimations() {
     let frameId = 0;
 
     const ctx = gsap.context(() => {
-      // Logo flies in from left
-      gsap.from("[data-intro='logo']", {
+      const animateIfFound = (selector: string, vars: gsap.TweenVars): void => {
+        const targets = gsap.utils.toArray(selector);
+        if (targets.length === 0) {
+          return;
+        }
+        gsap.from(targets, vars);
+      };
+
+      // Intro targets are route-specific, so animate only when present.
+      animateIfFound("[data-intro='logo']", {
         x: -100,
         opacity: 0,
         duration: 1,
@@ -45,8 +53,7 @@ export function GsapScrollAnimations() {
         delay: 0.2,
       });
 
-      // Menu button flies in from right
-      gsap.from("[data-intro='menu']", {
+      animateIfFound("[data-intro='menu']", {
         x: 100,
         opacity: 0,
         duration: 1,
@@ -54,16 +61,14 @@ export function GsapScrollAnimations() {
         delay: 0.2,
       });
 
-      // Hero image fades in
-      gsap.from("[data-intro='hero-image']", {
+      animateIfFound("[data-intro='hero-image']", {
         opacity: 0,
         duration: 1.4,
         ease: "power2.out",
         delay: 0.6,
       });
 
-      // Hero decor flies in from left
-      gsap.from("[data-intro='hero-decor']", {
+      animateIfFound("[data-intro='hero-decor']", {
         x: -140,
         opacity: 0,
         duration: 1,
@@ -139,7 +144,10 @@ export function GsapScrollAnimations() {
 
       // Stagger children
       gsap.utils.toArray<HTMLElement>("[data-anim='stagger']").forEach((el) => {
-        const children = el.children;
+        const children = Array.from(el.children);
+        if (children.length === 0) {
+          return;
+        }
         gsap.from(children, {
           y: 50,
           opacity: 0,
