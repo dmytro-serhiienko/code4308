@@ -76,6 +76,16 @@ export function GsapScrollAnimations() {
         delay: 0.15,
       });
 
+      animateIfFound("[data-intro='hero-text']", {
+        x: -120,
+        opacity: 0,
+        duration: 0.9,
+        stagger: 0.16,
+        ease: "power3.out",
+        delay: 0.3,
+        clearProps: "transform,opacity",
+      });
+
       // Fade up
       gsap.utils.toArray<HTMLElement>("[data-anim='fade-up']").forEach((el) => {
         gsap.from(el, {

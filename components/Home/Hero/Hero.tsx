@@ -9,9 +9,15 @@ export function Hero() {
       </div>
       <div className={css.container}>
         <div className={css.textBlock}>
-          <div className={css.heroText}>Слухай.</div>
-          <div className={css.heroText}>Думай.</div>
-          <div className={css.heroText}>Дій.</div>
+          <div className={css.heroText} data-intro="hero-text">
+            Слухай.
+          </div>
+          <div className={css.heroText} data-intro="hero-text">
+            Думай.
+          </div>
+          <div className={css.heroText} data-intro="hero-text">
+            Дій.
+          </div>
         </div>
 
         <div className={css.imageWrapper1} data-intro="hero-image">
