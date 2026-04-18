@@ -78,6 +78,7 @@
   height: auto;
   margin-top: 40px;
   margin-inline: auto;
+  filter: grayscale(100%) contrast(1.2) brightness(0.9);
 }
 
 @media (min-width: 1000px) {

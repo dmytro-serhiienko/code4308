@@ -59,8 +59,8 @@ export function Socials() {
         </div>
         <Image
           className={css.imageBack}
-          src="/image/social/background.png"
-          alt="Social background"
+          src="/image/social/podcast.png"
+          alt="Code4308 Podcast"
           width={2400}
           height={660}
           sizes="(min-width: 1000px) 1200px, 100vw"
