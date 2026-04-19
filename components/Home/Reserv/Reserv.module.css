@@ -35,11 +35,41 @@
   border: 1px solid #f2d244;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    background: #f2d244;
+    color: #000;
+  }
 }
 
-.mainBtn:hover {
-  background: #f2d244;
-  color: #000;
+.microIcon {
+  font-size: 18px;
+}
+
+.mainBtn:hover .microIcon {
+  animation: micro 0.4s infinite;
+}
+
+@keyframes micro {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* MODAL STYLES */

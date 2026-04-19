@@ -3,6 +3,8 @@ import { useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import css from "./Reserv.module.css";
 
+import { FaMicrophoneAlt } from "react-icons/fa";
+
 export function Reserv() {
   const [open, setOpen] = useState(false);
 
@@ -22,7 +24,7 @@ export function Reserv() {
             className={css.mainBtn}
             onClick={() => setOpen(true)}
           >
-            Записатись
+            Записатись <FaMicrophoneAlt className={css.microIcon} />
           </button>
         </div>
       </div>
