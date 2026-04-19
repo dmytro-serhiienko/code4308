@@ -128,6 +128,7 @@
   font-weight: 900;
   z-index: 5;
   color: rgba(242, 210, 68, 0.09);
+  pointer-events: none;
 }
 
 .decor2 {
@@ -139,6 +140,7 @@
   font-weight: 900;
   z-index: 5;
   color: rgba(242, 210, 68, 0.09);
+  pointer-events: none;
 }
 
 @media (min-width: 1000px) {
