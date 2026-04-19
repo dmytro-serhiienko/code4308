@@ -5,6 +5,10 @@ import Image from "next/image";
 import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 
+// exp
+import { CgMenuMotion } from "react-icons/cg";
+import { CiMenuFries } from "react-icons/ci";
+
 import { navLinks } from "./headerLinks";
 
 import css from "./Header.module.css";
@@ -46,7 +50,7 @@ export function Header() {
             <span className={css.logoExtraText}>Podcasts</span> */}
             <Image
               className={css.logoImage}
-              src="/image/logo/4308-logo-white.png"
+              src="/image/logo/logo.png"
               alt="Logo"
               width={200}
               height={50}
@@ -66,7 +70,7 @@ export function Header() {
               className={`${css.iconWrap} ${menu ? css.iconOpen : ""}`}
               aria-hidden="true"
             >
-              <HiMenuAlt3 className={`${css.iconBase} ${css.iconBurger}`} />
+              <CgMenuMotion className={`${css.iconBase} ${css.iconBurger}`} />
               <IoClose className={`${css.iconBase} ${css.iconClose}`} />
             </span>
           </button>

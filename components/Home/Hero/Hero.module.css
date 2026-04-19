@@ -106,7 +106,8 @@
   &:hover {
     background: #756e44;
     box-shadow: none;
-    border: none;
+    border: 1px solid #756e44;
+    color: #fff;
   }
 }
 
@@ -127,7 +128,6 @@
   font-size: 200px;
   font-weight: 900;
   z-index: 5;
-  /* color: rgba(242, 210, 68, 0.09); */
   color: rgba(117, 110, 68, 0.2);
   pointer-events: none;
 }
@@ -140,7 +140,6 @@
   font-size: 200px;
   font-weight: 900;
   z-index: 5;
-  /* color: rgba(242, 210, 68, 0.09); */
   color: rgba(117, 110, 68, 0.1);
   pointer-events: none;
 }

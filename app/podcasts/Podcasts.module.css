@@ -1,6 +1,6 @@
 .main {
-  background-color: #000;
-  color: #fff;
+  background: linear-gradient(180deg, #18191b 30%, #000000 100%);
+  /* color: #fff; */
   min-height: 100vh;
   padding: 140px 20px 80px;
 }
@@ -18,6 +18,7 @@
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
+  color: #bcbcbc;
 }
 
 .title::after {
@@ -27,7 +28,7 @@
   bottom: -15px;
   width: 60px;
   height: 3px;
-  background-color: #fff;
+  background-color: #756e44;
 }
 
 .grid {
@@ -64,7 +65,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
+  color: #bcbcbc;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 

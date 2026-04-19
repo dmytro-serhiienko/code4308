@@ -1,6 +1,5 @@
 .main {
-  background-color: #000;
-  color: #fff;
+  background: linear-gradient(180deg, #18191b 30%, #000000 100%);
   min-height: 100vh;
   padding: 140px 20px 80px;
 }
@@ -18,6 +17,7 @@
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
+  color: #bcbcbc;
 }
 
 .title::after {
@@ -27,7 +27,7 @@
   bottom: -15px;
   width: 60px;
   height: 3px;
-  background-color: #fff;
+  background-color: #756e44;
 }
 
 .grid {
@@ -48,6 +48,7 @@
   margin-bottom: 50px;
   line-height: 1.8;
   max-width: 450px;
+  color: #bcbcbc;
 }
 
 .contactList {
@@ -62,27 +63,23 @@
   gap: 20px;
   font-size: 18px;
   font-weight: 400;
-  color: var(--text);
+  color: #bcbcbc;
   text-decoration: none;
   transition:
     color 0.25s ease,
     transform 0.25s ease,
     opacity 0.25s ease;
 
-  &:visited {
-    color: var(--text);
-  }
-
   &:hover {
     opacity: 1;
-    color: #f2d244;
+    color: #fff;
     transform: translateY(-3px);
   }
 }
 
 .icon {
   font-size: 20px;
-  color: #f2d244;
+  color: #756e44;
 }
 
 .form {
@@ -110,9 +107,9 @@
 .inputGroup textarea {
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #bcbcbc;
   padding: 12px 0;
-  color: #fff;
+  color: #bcbcbc;
   outline: none;
   transition: border-color 0.3s;
   font-size: 16px;
@@ -125,13 +122,13 @@
 }
 
 .inputForm::placeholder {
-  color: rgba(242, 210, 68, 0.7);
+  color: #756e44;
 }
 
 .button {
   background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #bcbcbc;
+  border: 1px solid #bcbcbc;
   padding: 15px 40px;
   width: fit-content;
   font-weight: 500;
@@ -142,8 +139,9 @@
   margin-top: 20px;
 
   &:hover {
-    background: #fff;
-    color: #000;
+    background: #756e44;
+    color: #fff;
+    border: 1px solid #756e44;
   }
 }
 

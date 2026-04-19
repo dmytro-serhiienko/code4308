@@ -44,7 +44,8 @@
 
   &:hover {
     background: #756e44;
-    border: none;
+    border: 1px solid #756e44;
+    color: #fff;
   }
 }
 
@@ -99,6 +100,7 @@
   text-transform: uppercase;
   margin-bottom: 40px;
   letter-spacing: -1px;
+  color: #bcbcbc;
 }
 
 .form {
@@ -114,7 +116,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #766a38;
+  color: #756e44;
 }
 
 .input,
@@ -123,7 +125,7 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 10px 0;
-  color: #fff;
+  color: #bcbcbc;
   font-family: var(--font-tektur);
   outline: none;
 }
@@ -133,16 +135,29 @@
   border-bottom-color: #fff;
 }
 
+.input::placeholder,
+.textarea::placeholder {
+  color: #bcbcbc;
+  opacity: 0.5;
+}
+
 .submitBtn {
   margin-top: 20px;
-  background: #fff;
-  color: #000;
+  background: #bcbcbc;
+  color: #18191b;
   border: none;
   padding: 20px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #756e44;
+    color: #fff;
+  }
 }
 
 .decor1 {
@@ -154,8 +169,7 @@
   font-size: 200px;
   font-weight: 900;
   z-index: 0;
-  /* color: rgba(242, 210, 68, 0.09); */
-  color: rgba(117, 110, 68, 0.09);
+  color: rgba(117, 110, 68, 0.2);
 
   pointer-events: none;
 }
@@ -169,8 +183,7 @@
   font-size: 200px;
   font-weight: 900;
   z-index: 0;
-  /* color: rgba(242, 210, 68, 0.09); */
-  color: rgba(117, 110, 68, 0.09);
+  color: rgba(117, 110, 68, 0.1);
 
   pointer-events: none;
 }

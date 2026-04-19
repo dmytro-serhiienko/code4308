@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import css from "./Intro.module.css";
+import Image from "next/image";
 
 export default function Intro() {
   const [loading, setLoading] = useState(true);
@@ -57,7 +58,16 @@ export default function Intro() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className={css.logo}>CODE4308</h1>
+              <div className={css.logo}>
+                <Image
+                  className={css.logoImage}
+                  src="/image/logo/4308-logo-white.png"
+                  alt="Code 4308"
+                  width={420}
+                  height={120}
+                  priority
+                />
+              </div>
               <div className={css.loaderBox}>
                 <div className={css.counter}>{counter}%</div>
                 <div className={css.progressBg}>

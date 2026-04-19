@@ -27,8 +27,8 @@
     background 0.2s ease;
 
   &:hover {
-    background: #f2d244;
-    color: #000;
+    background: #756e44;
+    color: #fff;
   }
 }
 

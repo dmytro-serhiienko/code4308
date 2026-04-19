@@ -24,13 +24,14 @@
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: 800;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 12px;
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImage {
+  width: min(320px, 80vw);
+  height: auto;
 }
 
 .loaderBox {
@@ -63,9 +64,8 @@
 }
 
 @media (min-width: 1000px) {
-  .logo {
-    font-size: 48px;
-    letter-spacing: 20px;
+  .logoImage {
+    width: min(520px, 60vw);
   }
 
   .content {
