@@ -1,5 +1,6 @@
 import Link from "next/link";
 import css from "./Footer.module.css";
+import Image from "next/image";
 
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegramPlane, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
@@ -42,10 +43,16 @@ export function Footer() {
         {/* Лого  */}
         <div className={css.column} data-anim="fade-up">
           <Link href="/" className={css.logoLink}>
-            <span className={css.logoText}>Code4308</span>
-            <span className={css.logoExtraText}>Podcasts</span>
+            {/* <span className={css.logoText}>Code4308</span>
+            <span className={css.logoExtraText}>Podcasts</span> */}
+            <Image
+              className={css.logoImage}
+              src="/image/logo/logo-white.png"
+              alt="Logo"
+              width={200}
+              height={50}
+            />
           </Link>
-
           <p className={css.description}>
             Платформа для тих, хто слухає, думає та діє. Приєднуйся до
             спільноти.

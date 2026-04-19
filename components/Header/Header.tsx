@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { IoClose } from "react-icons/io5";
 import { HiMenuAlt3 } from "react-icons/hi";
 
@@ -41,8 +42,15 @@ export function Header() {
       <div className={css.headerContent}>
         <div className={css.logo} data-intro="logo">
           <Link href="/" className={css.logoLink} onClick={closeMenu}>
-            <span className={css.logoText}>Code4308</span>
-            <span className={css.logoExtraText}>Podcasts</span>
+            {/* <span className={css.logoText}>Code4308</span>
+            <span className={css.logoExtraText}>Podcasts</span> */}
+            <Image
+              className={css.logoImage}
+              src="/image/logo/logo-white.png"
+              alt="Logo"
+              width={200}
+              height={50}
+            />
           </Link>
         </div>
 

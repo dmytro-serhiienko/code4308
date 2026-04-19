@@ -45,19 +45,33 @@
   }
 }
 
-.logoText {
+/* .logoImage::before {
+  content: "";
+  position: absolute;
+  inset: -18px -26px;
+  background-image: url("/image/header/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.8;
+  transform: rotate(20deg);
+  pointer-events: none;
+  z-index: 0;
+} */
+
+/* .logoText {
   position: relative;
   display: inline-block;
-}
+} */
 
-.logoExtraText {
+/* .logoExtraText {
   font-size: 14px;
   color: #f2d244;
   opacity: 0.8;
-}
+} */
 
 /* відбиток */
-.logoText::before {
+/* .logoText::before {
   content: "";
   position: absolute;
   inset: -18px -26px;
@@ -69,12 +83,17 @@
   transform: rotate(20deg);
   pointer-events: none;
   z-index: -1;
-}
+} */
 
-.logoText {
+/* .logoText {
   position: relative;
   z-index: 1;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+} */
+
+.logoImage {
+  display: block;
+  width: 170px;
 }
 
 .menuTrigger {
