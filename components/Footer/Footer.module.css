@@ -156,7 +156,7 @@
   }
 }
 
-.decor {
+.decor1 {
   position: absolute;
   bottom: -12%;
   left: 50%;
@@ -168,12 +168,35 @@
   color: rgba(242, 210, 68, 0.06);
 }
 
+.decor2 {
+  position: absolute;
+  bottom: -13%;
+  left: 55%;
+  transform: translateX(-55%);
+  font-size: 180px;
+  font-weight: 900;
+  z-index: 0;
+  pointer-events: none;
+  color: rgba(242, 210, 68, 0.06);
+}
+
 @media (min-width: 1000px) {
-  .decor {
+  .decor1 {
     position: absolute;
     bottom: -60%;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 620px;
+    font-weight: 900;
+    letter-spacing: -20px;
+    z-index: 0;
+  }
+
+  .decor2 {
+    position: absolute;
+    bottom: -63%;
+    left: 53%;
+    transform: translateX(-53%);
     font-size: 620px;
     font-weight: 900;
     letter-spacing: -20px;
