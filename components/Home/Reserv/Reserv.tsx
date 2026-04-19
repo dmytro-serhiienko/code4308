@@ -10,7 +10,7 @@ export function Reserv() {
     <section className={css.reserv}>
       <div className={css.container}>
         <div className={css.ctaBlock}>
-          <h2 className={css.title}>Стань героєм нашого подкасту</h2>
+          <h2 className={css.title}>Стань героєм нашого подкасту!</h2>
           <button
             type="button"
             className={css.mainBtn}
