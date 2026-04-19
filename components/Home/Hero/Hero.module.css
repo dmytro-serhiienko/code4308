@@ -53,7 +53,7 @@
   background-position: right 0 bottom 0;
   background-size: auto 80%;
   background-attachment: scroll;
-  filter: contrast(1.2) brightness(0.8) grayscale(100%);
+  filter: contrast(1.2) brightness(0.9) grayscale(100%);
 }
 
 .imageWrapper2 {
