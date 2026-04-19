@@ -2,6 +2,9 @@
   background-color: #000;
   padding: 100px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  overflow: hidden;
+  position: relative;
 }
 
 .ctaBlock {
@@ -128,7 +131,31 @@
   cursor: pointer;
 }
 
+.decor {
+  position: absolute;
+  line-height: 0.8;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 900;
+  z-index: 5;
+  color: rgba(242, 210, 68, 0.09);
+}
+
 @media (min-width: 1000px) {
+  .decor {
+    position: absolute;
+    line-height: 0.8;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 600px;
+    font-weight: 900;
+    z-index: 10;
+    color: rgba(242, 210, 68, 0.09);
+  }
+
   .reserv {
     padding: 100px 20px;
   }

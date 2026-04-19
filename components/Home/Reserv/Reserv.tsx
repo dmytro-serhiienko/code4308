@@ -8,6 +8,9 @@ export function Reserv() {
 
   return (
     <section className={css.reserv}>
+      <div className={css.decor} data-intro="hero-decor">
+        4308
+      </div>
       <div className={css.container}>
         <div className={css.ctaBlock}>
           <h2 className={css.title}>Стань героєм нашого подкасту!</h2>
