@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import css from "./Gallery.module.css";
 
 export function Gallery() {
-  const images = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const images = [11, 12, 13, 14, 15, 16, 17, 18, 19];
 
   return (
     <section className={css.gallerySection} data-anim="scale-in">
