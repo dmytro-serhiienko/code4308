@@ -1,6 +1,37 @@
 import Link from "next/link";
-import { FaInstagram, FaTelegram, FaYoutube, FaSpotify } from "react-icons/fa6";
+// import { FaInstagram, FaTelegram, FaYoutube, FaSpotify } from "react-icons/fa6";
 import css from "./Footer.module.css";
+
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTelegramPlane, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
+
+const socialLinks = [
+  {
+    id: 1,
+    href: "https://www.instagram.com/hub.4308/",
+    icon: <AiFillInstagram />,
+  },
+  {
+    id: 2,
+    href: "https://t.me/recruit4308",
+    icon: <FaTelegramPlane />,
+  },
+  {
+    id: 3,
+    href: "https://www.youtube.com/@production.4308",
+    icon: <FaYoutube />,
+  },
+  {
+    id: 4,
+    href: "https://open.spotify.com/show/2q0TuBjroDZeBT7ucSmrZI",
+    icon: <FaSpotify />,
+  },
+  {
+    id: 5,
+    href: "https://podcasts.apple.com/tr/podcast/code-4308/id1892027093",
+    icon: <FaApple />,
+  },
+];
 
 export function Footer() {
   return (
@@ -40,24 +71,20 @@ export function Footer() {
         <div className={css.column} data-anim="fade-up">
           <h3 className={css.title}>Ми в мережах</h3>
           <div className={css.socials}>
-            <Link href="https://www.instagram.com/hub.4308/" target="_blank">
-              <FaInstagram />
-            </Link>
-            <Link href="https://t.me/recruit4308" target="_blank">
-              <FaTelegram />
-            </Link>
-            <Link
-              href="https://www.youtube.com/@production.4308"
-              target="_blank"
-            >
-              <FaYoutube />
-            </Link>
-            <Link
-              href="https://open.spotify.com/show/2q0TuBjroDZeBT7ucSmrZI"
-              target="_blank"
-            >
-              <FaSpotify />
-            </Link>
+            {socialLinks &&
+              socialLinks.map((el) => {
+                return (
+                  <Link
+                    key={el.id}
+                    href={el.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={css.socialLink}
+                  >
+                    <div className={css.iconWrapper}>{el.icon}</div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </div>

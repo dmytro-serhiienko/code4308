@@ -1,5 +1,5 @@
 import { AiFillInstagram } from "react-icons/ai";
-import { FaTelegramPlane, FaYoutube, FaSpotify } from "react-icons/fa";
+import { FaTelegramPlane, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
 import css from "./Socials.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,6 +28,12 @@ const socialLinks = [
     href: "https://open.spotify.com/show/2q0TuBjroDZeBT7ucSmrZI",
     icon: <FaSpotify />,
     label: "Spotify",
+  },
+  {
+    id: 5,
+    href: "https://podcasts.apple.com/tr/podcast/code-4308/id1892027093",
+    icon: <FaApple />,
+    label: "Apple Podcast",
   },
 ];
 
