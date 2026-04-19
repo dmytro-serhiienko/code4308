@@ -93,7 +93,7 @@
 
 .logoImage {
   display: block;
-  width: 170px;
+  width: 90px;
 }
 
 .menuTrigger {
@@ -128,6 +128,7 @@
   transition:
     transform 0.28s ease,
     opacity 0.2s ease;
+  color: #bcbcbc;
 }
 
 .iconBurger {
@@ -183,7 +184,7 @@
 }
 
 .navLink {
-  color: #fff;
+  color: #bcbcbc;
   text-decoration: none;
   font-size: 30px;
   font-weight: 800;
@@ -214,7 +215,7 @@
   height: 0.9em;
   flex-shrink: 0;
   transition: transform 0.35s ease;
-  color: #f2d244;
+  color: #756e44;
 }
 
 .navLink:hover .navArrow {
@@ -222,7 +223,7 @@
 
   transform: scale(1.9) rotate(360deg);
   margin-left: 20px;
-  color: rgb(244, 45, 10);
+  color: #756e44;
 }
 
 @media (min-width: 1000px) {

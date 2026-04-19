@@ -1,6 +1,5 @@
 .socials {
-  background-color: #000;
-  color: #fff;
+  color: #bcbcbc;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 60px;
@@ -41,11 +40,11 @@
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  color: #fff;
+  color: #b3ac9c;
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    background-color: #f2d244;
+    background-color: #756e44;
     color: #000;
     transform: translateY(-15px);
   }
@@ -54,7 +53,7 @@
 .iconWrapper {
   font-size: 32px;
   margin-bottom: 15px;
-  color: #f2d244;
+  color: #756e44;
   transition: all 0.3s ease-in-out;
 }
 
@@ -69,7 +68,7 @@
   position: absolute;
   top: -20px;
   left: -20px;
-  color: white;
+  color: #b3ac9c;
 }
 
 .linkText {

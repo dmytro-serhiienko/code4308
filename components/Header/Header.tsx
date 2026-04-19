@@ -46,7 +46,7 @@ export function Header() {
             <span className={css.logoExtraText}>Podcasts</span> */}
             <Image
               className={css.logoImage}
-              src="/image/logo/logo-white.png"
+              src="/image/logo/4308-logo-white.png"
               alt="Logo"
               width={200}
               height={50}

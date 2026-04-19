@@ -1,5 +1,5 @@
 .about {
-  background-color: #000;
+  background: linear-gradient(180deg, #18191b, #000000);
   color: #fff;
   padding: 30px 20px;
   min-height: 100vh;
@@ -17,7 +17,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #756e44;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -37,6 +37,7 @@
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 40px;
+  color: #bcbcbc;
 }
 
 .hostImageWrapper {
@@ -70,24 +71,25 @@
   font-weight: 800;
   text-transform: uppercase;
   margin: 0;
+  color: #bcbcbc;
 }
 
 .instagramIcon {
   font-size: 20px;
-  color: #f2d244;
+  color: #bcbcbc;
 }
 
 .hostRank {
   font-size: 13px;
-  color: #888;
+  color: #756e44;
   margin-top: 4px;
   text-transform: uppercase;
 }
 
 .quote {
+  color: #bcbcbc;
   font-size: 20px;
   line-height: 1.4;
-  color: var(--text);
   font-weight: 400;
   margin: 0;
   padding-top: 30px;
@@ -101,7 +103,7 @@
 }
 
 .personaLink {
-  color: #f2d244;
+  color: #bcbcbc;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   display: inline-block;
@@ -118,7 +120,7 @@
   &:hover .arrowIcon {
     transform: scale(1.9) rotate(360deg);
     margin-left: 20px;
-    color: rgb(244, 45, 10);
+    color: #756e44;
   }
 }
 
