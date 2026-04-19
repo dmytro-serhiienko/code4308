@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import { FaInstagram, FaTelegram, FaYoutube, FaSpotify } from "react-icons/fa6";
 import css from "./Footer.module.css";
 
 import { AiFillInstagram } from "react-icons/ai";

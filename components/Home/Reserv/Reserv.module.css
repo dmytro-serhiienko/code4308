@@ -202,9 +202,9 @@
   .decor2 {
     position: absolute;
     line-height: 0.8;
-    top: 33%;
+    top: 35%;
     left: 53%;
-    transform: translate(-53%, -33%);
+    transform: translate(-53%, -35%);
     font-size: 600px;
     font-weight: 900;
     z-index: 10;
