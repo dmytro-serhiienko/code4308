@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="ua"
       className={`${tektur.variable} suppressHydrationWarning h-full antialiased`}
     >
-      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="/fav.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
         <Intro />
         <SmoothScroll>

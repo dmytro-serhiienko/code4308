@@ -54,24 +54,6 @@
   animation: micro 0.4s infinite;
 }
 
-@keyframes micro {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  75% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 /* MODAL STYLES */
 .modalOverlay {
   position: fixed;
@@ -222,5 +204,23 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+  }
+}
+
+@keyframes micro {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
