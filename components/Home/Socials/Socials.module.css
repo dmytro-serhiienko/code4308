@@ -42,13 +42,25 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   color: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &:hover {
     background-color: #f2d244;
     color: #000;
     transform: translateY(-15px);
   }
+}
+
+.iconWrapper {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #f2d244;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialLink:hover .iconWrapper {
+  color: #000;
+  transform: translateX(10px);
 }
 
 .decorIcon {
@@ -58,11 +70,6 @@
   top: -20px;
   left: -20px;
   color: white;
-}
-
-.iconWrapper {
-  font-size: 32px;
-  margin-bottom: 15px;
 }
 
 .linkText {
