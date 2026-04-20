@@ -61,7 +61,7 @@ export default function Intro() {
               <div className={css.logo}>
                 <Image
                   className={css.logoImage}
-                  src="/image/logo/4308-logo-white.png"
+                  src="/image/logo/logo.png"
                   alt="Code 4308"
                   width={420}
                   height={120}

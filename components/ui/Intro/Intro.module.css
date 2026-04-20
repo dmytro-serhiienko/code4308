@@ -32,7 +32,6 @@
 .logoImage {
   width: min(320px, 80vw);
   height: auto;
-  opacity: 0.7;
 }
 
 .loaderBox {
