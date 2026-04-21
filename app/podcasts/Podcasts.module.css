@@ -1,6 +1,5 @@
 .main {
   background: linear-gradient(180deg, #18191b 30%, #000000 100%);
-  /* color: #fff; */
   min-height: 100vh;
   padding: 140px 20px 80px;
 }
@@ -41,7 +40,10 @@
 .videoItem {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+
+  background: rgba(117, 110, 68, 0.2);
+  padding: 20px;
 }
 
 .videoWrapper {
@@ -50,6 +52,7 @@
   height: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000;
 }
 
 .videoWrapper iframe {
@@ -60,6 +63,12 @@
   height: 100%;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .videoTitle {
   font-size: 18px;
   font-weight: 500;
@@ -68,19 +77,95 @@
   color: #bcbcbc;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  line-height: 1.4;
 }
 
+.videoTitle:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Секція аудіо-посилань */
+.audioLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.listenOn {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #756e44;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.buttonsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.audioBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bcbcbc;
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 8px 16px;
+  border: 1px solid rgba(188, 188, 188, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.audioBtn svg {
+  font-size: 18px;
+}
+
+.audioBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Специфічні кольори іконок при наведенні */
+.audioBtn:hover svg[class*="FaSpotify"] {
+  color: #1db954;
+}
+
+.audioBtn:hover svg[class*="FaApple"] {
+  color: #fff;
+}
+
+/* Адаптивність для десктопа */
 @media (min-width: 1000px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    gap: 60px 40px;
+    gap: 80px 40px;
   }
 
   .title {
     font-size: 52px;
+  }
+
+  .videoTitle {
+    font-size: 20px;
+  }
+}
+
+/* Оптимізація для дуже малих екранів */
+@media (max-width: 480px) {
+  .buttonsGroup {
+    flex-direction: column;
+  }
+
+  .audioBtn {
+    justify-content: center;
   }
 }

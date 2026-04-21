@@ -1,17 +1,7 @@
+import { FaSpotify, FaApple } from "react-icons/fa";
 import css from "./Podcasts.module.css";
-
-const podcastVideos = [
-  {
-    id: "7AaNjMUxXmQ",
-    title: "Дмитро «Ґвар» Грекович: про шлях воїна та нову реальність",
-    url: "https://www.youtube.com/watch?v=7AaNjMUxXmQ",
-  },
-  {
-    id: "_qVsAlaykp4",
-    title: "Кирило «Масло» Масалітін: розмова про цінності та майбутнє",
-    url: "https://www.youtube.com/watch?v=_qVsAlaykp4",
-  },
-];
+import Link from "next/link";
+import { podcastVideos } from "./podcasts";
 
 export default function PodcastsPage() {
   return (
@@ -21,8 +11,10 @@ export default function PodcastsPage() {
 
         <div className={css.grid}>
           {podcastVideos.map((video) => (
+            // Картка з відео та аудіо
             <div key={video.id} className={css.videoItem}>
-              <div className={css.videoWrapper}>
+              {/* відео посилання */}
+              <div className={css.videoWrapper} data-lenis-prevent>
                 <iframe
                   src={`https://www.youtube.com/embed/${video.id}`}
                   title={video.title}
@@ -31,14 +23,41 @@ export default function PodcastsPage() {
                   allowFullScreen
                 ></iframe>
               </div>
-              <a
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={css.videoTitle}
-              >
-                {video.title}
-              </a>
+
+              <div className={css.info}>
+                {/* назва посилання */}
+                <Link
+                  href={video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={css.videoTitle}
+                >
+                  {video.title}
+                </Link>
+
+                {/* аудіо посилання */}
+                <div className={css.audioLinks}>
+                  <span className={css.listenOn}>Слухати на:</span>
+                  <div className={css.buttonsGroup}>
+                    <Link
+                      href={video.links.spotify}
+                      target="_blank"
+                      className={css.audioBtn}
+                      title="Spotify"
+                    >
+                      <FaSpotify /> <span>Spotify</span>
+                    </Link>
+                    <Link
+                      href={video.links.apple}
+                      target="_blank"
+                      className={css.audioBtn}
+                      title="Apple Podcasts"
+                    >
+                      <FaApple /> <span>Apple</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
