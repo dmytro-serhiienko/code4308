@@ -7,6 +7,7 @@ import { SmoothScroll } from "@/components/ui/SmoothScroll/SmoothScroll";
 import ScrollTop from "@/components/ui/ScrollToTop/ScrollTop";
 import { GsapScrollAnimations } from "@/components/ui/GSAP/Gsap";
 import Intro from "@/components/ui/Intro/Intro";
+import { Toaster } from "sonner";
 
 const tektur = Tektur({
   variable: "--font-tektur",
@@ -37,6 +38,16 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <Toaster
+            theme="dark"
+            position="top-center"
+            closeButton
+            richColors={false} // Якщо вимкнути richColors, тости будуть монохромними (чорно-білими)
+            toastOptions={{
+              className: "my-custom-toast",
+              style: {},
+            }}
+          />
           <ScrollTop />
         </SmoothScroll>
       </body>

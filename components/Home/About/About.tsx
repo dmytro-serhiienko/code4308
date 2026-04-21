@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { IoLogoInstagram } from "react-icons/io";
+import { MdArrowOutward } from "react-icons/md";
 import css from "./About.module.css";
 import Link from "next/link";
-import { MdArrowOutward } from "react-icons/md";
 
 export function About() {
   return (

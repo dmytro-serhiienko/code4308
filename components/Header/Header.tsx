@@ -1,18 +1,17 @@
 "use client";
+
 import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
+
 import { IoClose } from "react-icons/io5";
-import { HiMenuAlt3 } from "react-icons/hi";
-
-// exp
+import { MdArrowOutward } from "react-icons/md";
 import { CgMenuMotion } from "react-icons/cg";
-import { CiMenuFries } from "react-icons/ci";
-
-import { navLinks } from "./headerLinks";
 
 import css from "./Header.module.css";
-import { MdArrowOutward } from "react-icons/md";
+
+import { navLinks } from "./headerLinks";
 
 export function Header() {
   const [menu, setMenu] = useState(false);
