@@ -49,6 +49,24 @@ export function Footer() {
           height={100}
         />
       </div>
+      <div className={css.decor3} data-intro="hero-decor">
+        <Image
+          className={css.decorImage3}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
+      </div>
+      <div className={css.decor4} data-intro="hero-decor">
+        <Image
+          className={css.decorImage4}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
+      </div>
 
       <div className={css.container}>
         {/* Лого  */}
