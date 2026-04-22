@@ -32,7 +32,7 @@ export default function RootLayout({
     >
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
-        {/* <Intro /> */}
+        <Intro />
         <SmoothScroll>
           <GsapScrollAnimations />
           <Header />
@@ -42,7 +42,7 @@ export default function RootLayout({
             theme="dark"
             position="top-center"
             closeButton
-            richColors={false} // Якщо вимкнути richColors, тости будуть монохромними (чорно-білими)
+            richColors={false}
             toastOptions={{
               className: "my-custom-toast",
               style: {},
