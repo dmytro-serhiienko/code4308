@@ -58,8 +58,7 @@ export function About() {
                 </Link>
               </div>
               <p className={css.hostRank}>
-                головний сержант 12-ї бригади спеціального призначення НГУ
-                «Азов»
+                головний сержант 1-го корпусу НГУ «Азов»
               </p>
               <Link href="/kyrylo" className={css.personaLink}>
                 ОСОБИСТИЙ ШЛЯХ <MdArrowOutward className={css.arrowIcon} />
