@@ -13,7 +13,7 @@
   font-size: 42px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
@@ -163,7 +163,7 @@
   }
 }
 
-/* Оптимізація для дуже малих екранів */
+/* Опт для дуже малих екранів */
 @media (max-width: 480px) {
   .buttonsGroup {
     flex-direction: column;
