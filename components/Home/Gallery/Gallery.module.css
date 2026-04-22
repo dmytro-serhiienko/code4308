@@ -10,7 +10,6 @@
   --swiper-pagination-color: #ffffff;
 }
 
-/* Робимо посилання на весь слайд */
 .galleryItem {
   display: block;
   width: 100%;

@@ -39,7 +39,7 @@ export function Gallery() {
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true, // ОСЬ ЦЕЙ ПАРАМЕТР ЗУПИНЯЄ СВАЙПЕР ПРИ ХОВЕРІ
+            pauseOnMouseEnter: true, //ЗУПИНЯЄ СВАЙПЕР ПРИ ХОВЕРІ
           }}
           pagination={{ clickable: true }}
           breakpoints={{
