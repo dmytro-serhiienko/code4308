@@ -18,6 +18,10 @@
   position: relative;
   display: inline-block;
   color: #bcbcbc;
+
+  & span {
+    color: #756e44;
+  }
 }
 
 .title::after {

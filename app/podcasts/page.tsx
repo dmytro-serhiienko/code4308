@@ -7,7 +7,9 @@ export default function PodcastsPage() {
   return (
     <main className={css.main}>
       <div className={css.container}>
-        <h1 className={css.title}>Подкасти</h1>
+        <h1 className={css.title}>
+          Розмови, які <span>варто почути</span>
+        </h1>
 
         <div className={css.grid}>
           {podcastVideos.map((video) => (
