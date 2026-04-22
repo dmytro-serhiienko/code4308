@@ -36,7 +36,7 @@ export function About() {
                 </Link>
               </div>
               <p className={css.hostRank}>
-                молодший сержант 1-го корпусу «Азов»
+                старший сержант 1-го корпусу «Азов»
               </p>
 
               <Link href="/dmytro" className={css.personaLink}>
