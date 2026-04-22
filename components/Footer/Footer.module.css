@@ -172,7 +172,7 @@
   position: absolute;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.1;
+  opacity: 0.28;
   transition: opacity 0.5s ease;
   width: 140%;
   max-width: 600px;
@@ -203,7 +203,7 @@
   .decor2 {
     width: 100%;
     max-width: 1000px;
-    opacity: 0.3;
+    /* opacity: 0.28; */
   }
 
   .decor1 {

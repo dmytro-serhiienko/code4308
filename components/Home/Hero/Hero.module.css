@@ -136,12 +136,12 @@
 
 .decor1 {
   transform: translate(-50%, -50%) rotate(-5deg);
-  opacity: 0.15;
+  opacity: 0.18;
 }
 
 .decor2 {
   transform: translate(-50%, -50%) translate(11px, 4px) rotate(-5deg);
-  opacity: 0.2;
+  opacity: 0.27;
 }
 
 .decorImage1,
