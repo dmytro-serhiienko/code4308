@@ -19,11 +19,9 @@ import "lightgallery/css/lg-thumbnail.css";
 
 import css from "./Gallery.module.css";
 
-export function Gallery() {
-  const images = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-  ];
+import { images } from "./gallery-data";
 
+export function Gallery() {
   return (
     <section className={css.gallerySection} data-anim="scale-in">
       <LightGallery
