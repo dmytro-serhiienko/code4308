@@ -114,42 +114,55 @@ function LenisGsapBridge() {
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<LenisRef>(null);
   const pathname = usePathname();
-
-  // Визначаємо
   const isPodcastsPage = pathname === "/podcasts";
 
   useEffect(() => {
     const lenis = lenisRef.current?.lenis;
+    if (!lenis) return;
 
-    // ЛОГІКА ВИМКНЕННЯ
+    const startScrolling = () => {
+      window.scrollTo(0, 0);
+      lenis.scrollTo(0, { immediate: true });
+
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+      lenis.start();
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+        lenis.resize();
+      }, 150);
+    };
+
     if (isPodcastsPage) {
-      // Зупиняємо плавний скрол
-      lenis?.stop();
+      lenis.stop();
       document.body.style.overflow = "auto";
       return;
     }
 
-    // ЛОГІКА ДЛЯ ІНТРО
     const introState = document.documentElement.dataset.intro;
 
     if (introState !== "done") {
+      lenis.stop();
       document.body.style.overflow = "hidden";
-      lenis?.stop();
-      return;
+      document.documentElement.style.overflow = "hidden";
+
+      const handleIntroComplete = () => {
+        startScrolling();
+      };
+
+      window.addEventListener("intro:complete", handleIntroComplete);
+      return () =>
+        window.removeEventListener("intro:complete", handleIntroComplete);
+    } else {
+      startScrolling();
     }
 
-    // У всіх інших випадках вмикаємо Lenis
-    document.body.style.overflow = "auto";
-    lenis?.start();
-
     requestAnimationFrame(() => {
-      lenis?.resize();
-
-      // Скролимо до якоря
+      lenis.resize();
       if (window.location.hash) {
-        lenis?.scrollTo(window.location.hash, { duration: 1 });
+        lenis.scrollTo(window.location.hash, { duration: 1.2 });
       }
-
       ScrollTrigger.refresh();
     });
   }, [pathname, isPodcastsPage]);
@@ -160,8 +173,10 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       ref={lenisRef}
       options={{
         duration: 1.2,
-        // Вимикаємо на подкастах
         smoothWheel: !isPodcastsPage,
+        syncTouch: true, // Критично для Safari на iPhone
+        wheelMultiplier: 1,
+        lerp: 0.1,
       }}
     >
       <LenisGsapBridge />
