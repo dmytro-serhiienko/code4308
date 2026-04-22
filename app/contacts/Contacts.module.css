@@ -1,7 +1,7 @@
 .main {
   background: linear-gradient(180deg, #18191b 30%, #000000 100%);
   min-height: 100vh;
-  padding: 140px 20px 80px;
+  padding: 120px 20px 60px;
 }
 
 .container {
@@ -10,10 +10,10 @@
 }
 
 .title {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
@@ -24,130 +24,141 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -15px;
-  width: 60px;
-  height: 3px;
+  bottom: -10px;
+  width: 40px;
+  height: 2px;
   background-color: #756e44;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  margin-top: 40px;
+  gap: 40px;
 }
 
 .info {
-  flex: 1;
+  width: 100%;
 }
 
 .text {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  opacity: 0.8;
-  margin-bottom: 50px;
-  line-height: 1.8;
-  max-width: 450px;
+  line-height: 1.6;
   color: #bcbcbc;
+  opacity: 0.7;
 }
 
-.contactList {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 18px;
-  font-weight: 400;
-  color: #bcbcbc;
-  text-decoration: none;
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.25s ease;
-
-  &:hover {
-    opacity: 1;
-    color: #fff;
-    transform: translateY(-3px);
-  }
-}
-
-.icon {
-  font-size: 20px;
-  color: #756e44;
+.formWrapper {
+  width: 100%;
 }
 
 .form {
-  flex: 1.2;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .inputGroup label {
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   font-weight: 500;
   opacity: 0.4;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
-.inputGroup input,
-.inputGroup textarea {
+.inputForm {
   background: transparent;
-  border: none;
-  border-bottom: 1px solid #bcbcbc;
-  padding: 12px 0;
-  color: #bcbcbc;
+  border: none !important;
+  border-bottom: 1px solid rgba(188, 188, 188, 0.3) !important;
+  padding: 10px 0;
+  color: #fff;
   outline: none;
   transition: border-color 0.3s;
   font-size: 16px;
-  font-weight: 300;
+  border-radius: 0;
 }
 
-.inputGroup input:focus,
-.inputGroup textarea:focus {
-  border-bottom-color: #fff;
+.inputForm:focus {
+  border-bottom-color: #756e44 !important;
 }
 
 .inputForm::placeholder {
-  color: #756e44;
+  color: rgba(117, 110, 68, 0.5);
+  font-size: 14px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.inputError {
+  border-bottom-color: #ff4d4d !important;
 }
 
 .button {
   background: transparent;
   color: #bcbcbc;
   border: 1px solid #bcbcbc;
-  padding: 15px 40px;
-  width: fit-content;
+  padding: 14px 30px;
+  width: 100%;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  margin-top: 20px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
 
-  &:hover {
-    background: #756e44;
-    color: #fff;
-    border: 1px solid #756e44;
-  }
+.button:hover:not(:disabled) {
+  background: #756e44;
+  color: #fff;
+  border-color: #756e44;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (min-width: 1000px) {
+  .main {
+    padding: 160px 40px 100px;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+
   .grid {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 100px;
+    align-items: flex-start;
+  }
+
+  .info {
+    flex: 1;
+    /* Параграф "прилипає" */
+    position: sticky;
+    top: 160px;
+  }
+
+  .text {
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  .formWrapper {
+    flex: 1.5;
+  }
+
+  .button {
+    width: fit-content;
   }
 }

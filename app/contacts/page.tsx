@@ -1,20 +1,16 @@
 "use client";
 import { useEffect } from "react";
-import Link from "next/link";
-import { FaTelegram, FaEnvelope, FaPhone } from "react-icons/fa6";
 import { Formik, Form, Field, useFormikContext, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast } from "sonner";
 import css from "./Contacts.module.css";
 
-// Типізація полів форми
 interface ContactFormValues {
   name: string;
   email: string;
   message: string;
 }
 
-// Схема валідації
 const ContactSchema = Yup.object().shape({
   name: Yup.string().min(2, "Ім'я надто коротке").required("Вкажіть ваше ім'я"),
   email: Yup.string()
@@ -38,9 +34,7 @@ function FormErrorWatcher() {
   useEffect(() => {
     if (isSubmitting && !isValidating && Object.keys(errors).length > 0) {
       Object.values(errors).forEach((error) => {
-        toast.error(error as string, {
-          id: error as string, // уникаємо дублікатів
-        });
+        toast.error(error as string, { id: error as string });
       });
     }
   }, [isSubmitting, isValidating, errors]);
@@ -73,89 +67,75 @@ export default function Contacts() {
         </h1>
 
         <div className={css.grid}>
-          {/* Інфо частина */}
+          {/* Текстова частина */}
           <div className={css.info} data-anim="fade-left">
             <p className={css.text}>
-              Маєш запитання чи пропозиції?
-              <br /> Звʼяжись із нами будь-яким зручним способом.
+              Маєш запитання, пропозиції щодо співпраці чи ідеї для нових
+              випусків?
+              <br />
+              <br />
+              Заповни форму, і наша команда звʼяжеться з тобою найближчим часом.
             </p>
-
-            <div className={css.contactList} data-anim="stagger">
-              <Link href="tel:+380000000000" className={css.contactItem}>
-                <FaPhone className={css.icon} />
-                <span>+38 (000) 000 00 00</span>
-              </Link>
-              <Link href="mailto:info@code4308.com" className={css.contactItem}>
-                <FaEnvelope className={css.icon} />
-                <span>info@code4308.com</span>
-              </Link>
-              <Link
-                href="https://t.me/recruit4308"
-                target="_blank"
-                className={css.contactItem}
-              >
-                <FaTelegram className={css.icon} />
-                <span>@recruit4308</span>
-              </Link>
-            </div>
           </div>
 
-          {/* Formik */}
-          <Formik
-            initialValues={initialValues}
-            validationSchema={ContactSchema}
-            validateOnChange={false}
-            validateOnBlur={false}
-            onSubmit={handleSubmit}
-          >
-            {({ errors, touched, isSubmitting }) => (
-              <Form className={css.form} data-anim="fade-right">
-                <FormErrorWatcher />
+          {/* Форма */}
+          <div className={css.formWrapper} data-anim="fade-right">
+            <Formik
+              initialValues={initialValues}
+              validationSchema={ContactSchema}
+              validateOnChange={false}
+              validateOnBlur={false}
+              onSubmit={handleSubmit}
+            >
+              {({ errors, touched, isSubmitting }) => (
+                <Form className={css.form}>
+                  <FormErrorWatcher />
 
-                <div className={css.inputGroup}>
-                  <label htmlFor="name">Імʼя</label>
-                  <Field
-                    name="name"
-                    type="text"
-                    id="name"
-                    placeholder="Твоє ім'я"
-                    className={`${css.inputForm} ${errors.name && touched.name ? css.inputError : ""}`}
-                  />
-                </div>
+                  <div className={css.inputGroup}>
+                    <label htmlFor="name">Імʼя</label>
+                    <Field
+                      name="name"
+                      type="text"
+                      id="name"
+                      placeholder="Твоє ім'я"
+                      className={`${css.inputForm} ${errors.name && touched.name ? css.inputError : ""}`}
+                    />
+                  </div>
 
-                <div className={css.inputGroup}>
-                  <label htmlFor="email">Email</label>
-                  <Field
-                    name="email"
-                    type="email"
-                    id="email"
-                    placeholder="example@mail.com"
-                    className={`${css.inputForm} ${errors.email && touched.email ? css.inputError : ""}`}
-                  />
-                </div>
+                  <div className={css.inputGroup}>
+                    <label htmlFor="email">Email</label>
+                    <Field
+                      name="email"
+                      type="email"
+                      id="email"
+                      placeholder="example@mail.com"
+                      className={`${css.inputForm} ${errors.email && touched.email ? css.inputError : ""}`}
+                    />
+                  </div>
 
-                <div className={css.inputGroup}>
-                  <label htmlFor="message">Повідомлення</label>
-                  <Field
-                    name="message"
-                    as="textarea"
-                    id="message"
-                    rows={5}
-                    placeholder="Твоє запитання..."
-                    className={`${css.inputForm} ${css.textarea} ${errors.message && touched.message ? css.inputError : ""}`}
-                  />
-                </div>
+                  <div className={css.inputGroup}>
+                    <label htmlFor="message">Повідомлення</label>
+                    <Field
+                      name="message"
+                      as="textarea"
+                      id="message"
+                      rows={4}
+                      placeholder="Твоє запитання..."
+                      className={`${css.inputForm} ${css.textarea} ${errors.message && touched.message ? css.inputError : ""}`}
+                    />
+                  </div>
 
-                <button
-                  type="submit"
-                  className={css.button}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Надсилання..." : "Надіслати"}
-                </button>
-              </Form>
-            )}
-          </Formik>
+                  <button
+                    type="submit"
+                    className={css.button}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Надсилання..." : "Надіслати повідомлення"}
+                  </button>
+                </Form>
+              )}
+            </Formik>
+          </div>
         </div>
       </div>
     </main>
