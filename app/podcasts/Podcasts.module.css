@@ -18,6 +18,7 @@
   position: relative;
   display: inline-block;
   color: #bcbcbc;
+  line-height: normal;
 
   & span {
     color: #756e44;
