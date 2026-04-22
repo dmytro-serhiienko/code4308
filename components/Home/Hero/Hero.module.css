@@ -1,11 +1,13 @@
 .hero {
   height: 100vh;
   width: 100%;
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   background-attachment: scroll;
+
+  position: relative;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
 }
 
 .container {
@@ -120,49 +122,50 @@
   pointer-events: none;
 }
 
-.decor1 {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 200px;
-  font-weight: 900;
-  z-index: 5;
-  color: rgba(117, 110, 68, 0.2);
+/*! Decor */
+.decor1,
+.decor2 {
+  position: fixed;
+  z-index: 0;
   pointer-events: none;
+  width: 140%;
+  max-width: 900px;
+  left: 50%;
+  top: 70%;
+}
+
+.decor1 {
+  transform: translate(-50%, -50%) rotate(-5deg);
+  opacity: 0.15;
 }
 
 .decor2 {
-  position: absolute;
-  bottom: 109px;
-  left: 52%;
-  transform: translateX(-52%);
-  font-size: 200px;
-  font-weight: 900;
-  z-index: 5;
-  color: rgba(117, 110, 68, 0.1);
-  pointer-events: none;
+  transform: translate(-50%, -50%) translate(11px, 4px) rotate(-5deg);
+  opacity: 0.1;
+}
+
+.decorImage1,
+.decorImage2 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (min-width: 1000px) {
-  .decor1 {
-    position: absolute;
-    bottom: -35%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 600px;
-    font-weight: 900;
+  .decor1,
+  .decor2 {
+    width: 100%;
+    max-width: 1800px;
+    top: 50%;
     z-index: 10;
   }
 
+  .decor1 {
+    transform: translate(-50%, -50%) translate(-10px, 60%);
+  }
+
   .decor2 {
-    position: absolute;
-    bottom: -36%;
-    left: 51%;
-    transform: translateX(-50%);
-    font-size: 600px;
-    font-weight: 900;
-    z-index: 10;
+    transform: translate(-50%, -50%) translate(1%, 63%);
   }
 
   .textBlock {

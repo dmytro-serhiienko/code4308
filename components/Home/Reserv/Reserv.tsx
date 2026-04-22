@@ -6,6 +6,7 @@ import { Formik, Form, Field, useFormikContext, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast } from "sonner";
 import css from "./Reserv.module.css";
+import Image from "next/image";
 
 interface FormikValues {
   name: string;
@@ -76,11 +77,23 @@ export function Reserv() {
 
   return (
     <section className={css.reserv}>
-      <div className={css.decor1} data-intro="hero-decor">
-        4308
+      <div className={css.decor1}>
+        <Image
+          className={css.decorImage1}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
       </div>
-      <div className={css.decor2} data-intro="hero-decor">
-        4308
+      <div className={css.decor2}>
+        <Image
+          className={css.decorImage2}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
       </div>
 
       <div className={css.container}>

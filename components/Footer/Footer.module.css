@@ -166,34 +166,59 @@
   }
 }
 
-.decor1 {
+/*? DECOR 4308 */
+.decor1,
+.decor2 {
   position: absolute;
-  bottom: -12%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 180px;
-  font-weight: 900;
   z-index: 0;
   pointer-events: none;
-  color: rgba(117, 110, 68, 0.2);
-  pointer-events: none;
+  opacity: 0.11;
+  transition: opacity 0.5s ease;
+  width: 140%;
+  max-width: 600px;
+}
+
+/*! Позиціонування моб */
+.decor1 {
+  top: -10px;
+  left: -20%;
+  transform: rotate(-10deg);
 }
 
 .decor2 {
-  position: absolute;
-  bottom: -13%;
-  left: 55%;
-  transform: translateX(-55%);
-  font-size: 180px;
-  font-weight: 900;
-  z-index: 0;
-  pointer-events: none;
-  color: rgba(117, 110, 68, 0.1);
-  pointer-events: none;
+  bottom: -30px;
+  right: -20%;
+  transform: rotate(15deg);
+}
+
+.decorImage1,
+.decorImage2 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (min-width: 1000px) {
+  .decor1,
+  .decor2 {
+    width: 100%;
+    max-width: 1000px;
+    opacity: 0.08;
+  }
+
   .decor1 {
+    top: 0;
+    left: -15%;
+    transform: rotate(-15deg);
+  }
+
+  .decor2 {
+    bottom: 0;
+    right: -15%;
+    transform: rotate(-15deg);
+  }
+
+  /* .decor1 {
     position: absolute;
     bottom: -60%;
     left: 50%;
@@ -213,7 +238,7 @@
     font-weight: 900;
     letter-spacing: -20px;
     z-index: 0;
-  }
+  } */
 
   .container {
     flex-direction: row;

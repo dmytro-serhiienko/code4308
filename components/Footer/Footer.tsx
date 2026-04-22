@@ -31,8 +31,24 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className={css.footer}>
-      <div className={css.decor1}>4308</div>
-      <div className={css.decor2}>4308</div>
+      <div className={css.decor1} data-intro="hero-decor">
+        <Image
+          className={css.decorImage1}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
+      </div>
+      <div className={css.decor2} data-intro="hero-decor">
+        <Image
+          className={css.decorImage2}
+          src="/4308.png"
+          alt="Decor"
+          width={1000}
+          height={100}
+        />
+      </div>
 
       <div className={css.container}>
         {/* Лого  */}

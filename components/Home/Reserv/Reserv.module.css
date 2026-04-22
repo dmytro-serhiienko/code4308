@@ -5,6 +5,7 @@
 
   overflow: hidden;
   position: relative;
+  clip-path: inset(0 0 0 0);
 }
 
 .ctaBlock {
@@ -57,7 +58,7 @@
   animation: micro 0.4s infinite;
 }
 
-/* MODAL STYLES */
+/*! MODAL STYLES */
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -160,55 +161,57 @@
   }
 }
 
-.decor1 {
-  position: absolute;
-  line-height: 0.8;
-  bottom: 18%;
-  left: 53%;
-  transform: translateX(-53%);
-  font-size: 200px;
-  font-weight: 900;
-  z-index: 0;
-  color: rgba(117, 110, 68, 0.2);
+/*! ДЕКОР */
+.decor1,
+.decor2 {
+  position: fixed;
 
+  z-index: 0;
   pointer-events: none;
+  width: 120%;
+  max-width: 800px;
+  transition: all 0.5s ease;
+}
+
+.decor1 {
+  bottom: 51%;
+  left: 50%;
+  transform: translateX(-50%) translateY(51%) rotate(-5deg);
+  opacity: 0.12;
 }
 
 .decor2 {
-  position: absolute;
-  line-height: 0.8;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 200px;
-  font-weight: 900;
-  z-index: 0;
-  color: rgba(117, 110, 68, 0.1);
+  bottom: 49%;
+  left: 52%;
+  transform: translateX(-52%) translateY(49%) rotate(-5deg);
+  opacity: 0.12;
+}
 
-  pointer-events: none;
+.decorImage1,
+.decorImage2 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (min-width: 1000px) {
+  .decor1,
+  .decor2 {
+    width: 100%;
+    max-width: 1400px;
+    bottom: auto;
+  }
+
   .decor1 {
-    position: absolute;
-    line-height: 0.8;
-    top: 30%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
-    font-size: 600px;
-    font-weight: 900;
-    z-index: 0;
+    transform: translate(-50%, -50%) translate(-10px, -1px) rotate(-10deg);
   }
 
   .decor2 {
-    position: absolute;
-    line-height: 0.8;
-    top: 35%;
-    left: 53%;
-    transform: translate(-53%, -35%);
-    font-size: 600px;
-    font-weight: 900;
-    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translate(20px, 30px) rotate(-10deg);
   }
 
   .reserv {

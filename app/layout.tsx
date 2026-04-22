@@ -32,7 +32,7 @@ export default function RootLayout({
     >
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
-        <Intro />
+        {/* <Intro /> */}
         <SmoothScroll>
           <GsapScrollAnimations />
           <Header />
