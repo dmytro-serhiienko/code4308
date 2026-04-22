@@ -31,6 +31,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className={css.footer}>
+      {/* Декорації */}
       <div className={css.decor1} data-intro="hero-decor">
         <Image
           className={css.decorImage1}
