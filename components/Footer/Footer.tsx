@@ -3,18 +3,13 @@ import css from "./Footer.module.css";
 import Image from "next/image";
 
 import { AiFillInstagram } from "react-icons/ai";
-import { FaTelegramPlane, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
+import { FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
 
 const socialLinks = [
   {
     id: 1,
     href: "https://www.instagram.com/hub.4308/",
     icon: <AiFillInstagram />,
-  },
-  {
-    id: 2,
-    href: "https://t.me/recruit4308",
-    icon: <FaTelegramPlane />,
   },
   {
     id: 3,

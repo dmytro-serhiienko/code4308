@@ -1,5 +1,5 @@
 import { AiFillInstagram } from "react-icons/ai";
-import { FaTelegramPlane, FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
+import { FaYoutube, FaSpotify, FaApple } from "react-icons/fa";
 import css from "./Socials.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,12 +10,6 @@ const socialLinks = [
     href: "https://www.instagram.com/hub.4308/",
     icon: <AiFillInstagram />,
     label: "Instagram",
-  },
-  {
-    id: 2,
-    href: "https://t.me/recruit4308",
-    icon: <FaTelegramPlane />,
-    label: "Telegram",
   },
   {
     id: 3,
