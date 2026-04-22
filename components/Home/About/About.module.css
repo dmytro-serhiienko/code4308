@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, #18191b, #000000);
   color: #fff;
   padding: 30px 20px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .container {
@@ -127,6 +127,7 @@
 @media (min-width: 1000px) {
   .about {
     padding: 60px 8%;
+    margin-bottom: 100px;
   }
 
   .label {
