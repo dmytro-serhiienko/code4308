@@ -30,7 +30,7 @@
 }
 
 .logoImage {
-  width: min(320px, 80vw);
+  width: min(120px, 80vw);
   height: auto;
 }
 
@@ -65,7 +65,7 @@
 
 @media (min-width: 1000px) {
   .logoImage {
-    width: min(520px, 60vw);
+    width: min(320px, 60vw);
   }
 
   .content {

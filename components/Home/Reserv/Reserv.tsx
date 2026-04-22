@@ -25,7 +25,7 @@ const FeedbackSchema = Yup.object().shape({
   topic: Yup.string()
     .min(10, "Опишіть тему детальніше (мін. 10 символів)")
     .required("Тема обов'язкова"),
-  socials: Yup.string().required("Вкажіть посилання на соцмережі"),
+  socials: Yup.string(),
 });
 
 const initialValues: FormikValues = {
