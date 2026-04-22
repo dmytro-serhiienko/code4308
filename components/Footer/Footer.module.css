@@ -218,28 +218,6 @@
     transform: rotate(-15deg);
   }
 
-  /* .decor1 {
-    position: absolute;
-    bottom: -60%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 620px;
-    font-weight: 900;
-    letter-spacing: -20px;
-    z-index: 0;
-  }
-
-  .decor2 {
-    position: absolute;
-    bottom: -63%;
-    left: 53%;
-    transform: translateX(-53%);
-    font-size: 620px;
-    font-weight: 900;
-    letter-spacing: -20px;
-    z-index: 0;
-  } */
-
   .container {
     flex-direction: row;
     justify-content: center;

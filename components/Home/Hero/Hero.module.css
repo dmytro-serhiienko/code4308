@@ -154,18 +154,22 @@
 @media (min-width: 1000px) {
   .decor1,
   .decor2 {
-    width: 100%;
+    width: 60%;
     max-width: 1800px;
-    top: 50%;
+    left: 0;
+    bottom: 0;
+    top: auto;
     z-index: 10;
   }
 
   .decor1 {
-    transform: translate(-50%, -50%) translate(-10px, 60%);
+    transform: translate(1%, 44%) translate(0px, 0%);
+    opacity: 0.15;
   }
 
   .decor2 {
-    transform: translate(-50%, -50%) translate(1%, 63%);
+    transform: translate(0%, 40%) translate(0%, 0%);
+    opacity: 0.2;
   }
 
   .textBlock {
