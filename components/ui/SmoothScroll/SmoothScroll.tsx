@@ -36,52 +36,44 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
         "lenis-smooth",
         "lenis-stopped",
       );
-      document.documentElement.style.removeProperty("overflow");
-      document.body.style.removeProperty("overflow");
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
       document.documentElement.style.height = "auto";
       document.body.style.height = "auto";
 
       ScrollTrigger.getAll().forEach((t) => t.kill());
-      ScrollTrigger.refresh();
+      ScrollTrigger.refresh(true);
     };
 
     if (isMobile || isPodcastsPage) {
       cleanup();
-    } else {
-      setTimeout(() => {
-        ScrollTrigger.refresh();
+      const timer = setTimeout(() => {
+        ScrollTrigger.refresh(true);
+        window.dispatchEvent(new Event("resize"));
       }, 500);
-    }
-  }, [pathname, isMobile, isPodcastsPage]);
-
-  useEffect(() => {
-    const lenis = lenisRef.current?.lenis;
-    if (!lenis || isMobile || isPodcastsPage) return;
-
-    const introState = document.documentElement.dataset.intro;
-
-    if (introState !== "done") {
-      lenis.stop();
-
-      const handleIntroComplete = () => {
-        lenis.start();
-        setTimeout(() => {
-          ScrollTrigger.refresh();
-          window.dispatchEvent(new Event("resize"));
-        }, 100);
-      };
-
-      window.addEventListener("intro:complete", handleIntroComplete);
-      return () =>
-        window.removeEventListener("intro:complete", handleIntroComplete);
+      return () => clearTimeout(timer);
     } else {
-      lenis.start();
-      ScrollTrigger.refresh();
+      const lenis = lenisRef.current?.lenis;
+      const introState = document.documentElement.dataset.intro;
+
+      if (introState === "done") {
+        lenis?.start();
+        setTimeout(() => ScrollTrigger.refresh(), 200);
+      } else {
+        lenis?.stop();
+        const handleIntro = () => {
+          lenis?.start();
+          setTimeout(() => ScrollTrigger.refresh(), 200);
+        };
+        window.addEventListener("intro:complete", handleIntro);
+        return () => window.removeEventListener("intro:complete", handleIntro);
+      }
     }
   }, [pathname, isMobile, isPodcastsPage]);
 
+  // Демонтуємо Lenis для мобілок та подкастів
   if (isMobile || isPodcastsPage) {
-    return <>{children}</>;
+    return <div id="native-scroll-root">{children}</div>;
   }
 
   return (
