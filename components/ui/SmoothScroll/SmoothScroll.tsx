@@ -80,7 +80,11 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       options={{
         duration: 1.2,
         smoothWheel: !isPodcastsPage,
-        syncTouch: true, // Критично для Safari на iPhone
+        // синхронізує Lenis з пальцем
+        syncTouch: true,
+        touchMultiplier: 1.5,
+        infinite: false,
+        gestureOrientation: "vertical",
         wheelMultiplier: 1,
         lerp: 0.1,
       }}
