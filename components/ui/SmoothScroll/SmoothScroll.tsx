@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactLenis, useLenis } from "lenis/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { LenisRef } from "lenis/react";
@@ -22,71 +22,77 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const [isMobile, setIsMobile] = useState(false);
   const isPodcastsPage = pathname === "/podcasts";
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
+  useLayoutEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
-    const lenis = lenisRef.current?.lenis;
-
-    // ЛОГІКА мобілка або Подкасти
-    if (isMobile || isPodcastsPage) {
-      if (lenis) {
-        lenis.stop();
-      }
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
+    const cleanup = () => {
+      document.documentElement.classList.remove(
+        "lenis",
+        "lenis-smooth",
+        "lenis-stopped",
+      );
+      document.documentElement.style.removeProperty("overflow");
+      document.body.style.removeProperty("overflow");
+      document.documentElement.style.height = "auto";
       document.body.style.height = "auto";
-      return;
+
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ScrollTrigger.refresh();
+    };
+
+    if (isMobile || isPodcastsPage) {
+      cleanup();
+    } else {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
     }
+  }, [pathname, isMobile, isPodcastsPage]);
 
-    // ЛОГІКА Тільки десктоп і не подкасти
-    const startScrolling = () => {
-      const introState = document.documentElement.dataset.intro;
+  useEffect(() => {
+    const lenis = lenisRef.current?.lenis;
+    if (!lenis || isMobile || isPodcastsPage) return;
 
-      if (introState === "done") {
-        document.body.style.overflow = "auto";
-        document.documentElement.style.overflow = "auto";
-        lenis?.start();
+    const introState = document.documentElement.dataset.intro;
 
+    if (introState !== "done") {
+      lenis.stop();
+
+      const handleIntroComplete = () => {
+        lenis.start();
         setTimeout(() => {
           ScrollTrigger.refresh();
-          lenis?.resize();
-        }, 150);
-      } else {
-        lenis?.stop();
-        document.body.style.overflow = "hidden";
-        document.documentElement.style.overflow = "hidden";
-      }
-    };
+          window.dispatchEvent(new Event("resize"));
+        }, 100);
+      };
 
-    const handleIntroComplete = () => {
-      document.documentElement.dataset.intro = "done";
-      startScrolling();
-    };
+      window.addEventListener("intro:complete", handleIntroComplete);
+      return () =>
+        window.removeEventListener("intro:complete", handleIntroComplete);
+    } else {
+      lenis.start();
+      ScrollTrigger.refresh();
+    }
+  }, [pathname, isMobile, isPodcastsPage]);
 
-    window.addEventListener("intro:complete", handleIntroComplete);
-    startScrolling();
-
-    return () => {
-      window.removeEventListener("intro:complete", handleIntroComplete);
-    };
-  }, [pathname, isPodcastsPage, isMobile]);
+  if (isMobile || isPodcastsPage) {
+    return <>{children}</>;
+  }
 
   return (
     <ReactLenis
       root
       ref={lenisRef}
-      autoRaf={!isMobile && !isPodcastsPage}
       options={{
         duration: 1.2,
         lerp: 0.1,
         smoothWheel: true,
+        syncTouch: false,
       }}
     >
       <LenisGsapBridge />
