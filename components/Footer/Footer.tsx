@@ -32,7 +32,7 @@ export function Footer() {
   return (
     <footer className={css.footer}>
       {/* Декорації */}
-      <div className={css.decor1} data-intro="hero-decor">
+      <div className={css.decor1}>
         <Image
           className={css.decorImage1}
           src="/4308.png"
@@ -41,7 +41,7 @@ export function Footer() {
           height={100}
         />
       </div>
-      <div className={css.decor2} data-intro="hero-decor">
+      <div className={css.decor2}>
         <Image
           className={css.decorImage2}
           src="/4308.png"
@@ -50,7 +50,7 @@ export function Footer() {
           height={100}
         />
       </div>
-      <div className={css.decor3} data-intro="hero-decor">
+      <div className={css.decor3}>
         <Image
           className={css.decorImage3}
           src="/4308.png"
@@ -59,7 +59,7 @@ export function Footer() {
           height={100}
         />
       </div>
-      <div className={css.decor4} data-intro="hero-decor">
+      <div className={css.decor4}>
         <Image
           className={css.decorImage4}
           src="/4308.png"

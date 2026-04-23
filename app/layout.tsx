@@ -33,23 +33,23 @@ export default function RootLayout({
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className="min-h-full flex flex-col">
         <Intro />
+        <GsapScrollAnimations />
+        <Header />
         <SmoothScroll>
-          <GsapScrollAnimations />
-          <Header />
           <main>{children}</main>
-          <Footer />
-          <Toaster
-            theme="dark"
-            position="top-center"
-            closeButton
-            richColors={false}
-            toastOptions={{
-              className: "my-custom-toast",
-              style: {},
-            }}
-          />
-          <ScrollTop />
         </SmoothScroll>
+        <Toaster
+          theme="dark"
+          position="top-center"
+          closeButton
+          richColors={false}
+          toastOptions={{
+            className: "my-custom-toast",
+            style: {},
+          }}
+        />
+        <ScrollTop />
+        <Footer />
       </body>
     </html>
   );

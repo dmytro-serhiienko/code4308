@@ -17,3 +17,17 @@ body {
     cursor: none !important;
   }
 }
+
+/*globals.css */
+
+/* Коли Intro завершено */
+html[data-intro="done"] [data-intro="hero-decor"] {
+  opacity: 0.28 !important; /* Повертаємо базову прозорість, прописану в модулі */
+  visibility: visible !important;
+}
+
+/* На всякий випадок, коли Lenis вимкнено (на мобілках/подкастах) */
+html:not(.lenis-smooth) [data-intro="hero-decor"] {
+  opacity: 0.28 !important;
+  visibility: visible !important;
+}
